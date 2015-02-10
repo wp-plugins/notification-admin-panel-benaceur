@@ -9,4 +9,10 @@
     <?php echo 'src: url(' . plugins_url( '../font/droidkufi-regular.ttf', __FILE__ ) . '); '; ?>
 }
 <?php } ?>
+.important-nab_a { 
+    line-height:2;
+    border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
+    -moz-border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
+    -webkit-border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
+}
 </style>
