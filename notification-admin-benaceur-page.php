@@ -13,10 +13,7 @@ function fonction_de_la_page_options() {
         $roles = array_map( 'translate_user_role', $roles );
 
 ?>
-<style> 
-
-</style>
-    <div class="wrap">
+    <div id="wpcontent-benaceur-nab"><div id="wpcontent-benaceur-nab-top"></div>
             <h2><?php _e('Notification Admin Panel Benaceur', 'notification-admin-benaceur'); ?></h2>
         <h3><?php _e('Settings', 'notification-admin-benaceur'); ?></h3>
         <form id="myOptionsForm1" method="post" action="options.php"  >
@@ -37,7 +34,7 @@ function fonction_de_la_page_options() {
 </table>
 
 			<table class="form-table">
-					<hr width="200" size="3">
+<center><div class="to-tr2"></div></center>
                 <tr> 
 <h3 align="center"><font color="#008080"><?php _e('First text', 'notification-admin-benaceur'); ?></font></h3>
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Enter your text', 'notification-admin-benaceur'); ?></th>
@@ -102,7 +99,7 @@ function fonction_de_la_page_options() {
 			?>
       <input type="submit" value="<?php _e('Click to reset properties plugin', 'notification-admin-benaceur');?>" class="button-secondary" />
     </form>
-            </br><hr width="40%" size="3"></br>
+            </br><center><div class="to-tr2"></div></center></br>
 			<div id="sub3">
         <form id="myOptionsForm2" method="post" action="options.php" name="f-tw"  >
             <?php settings_fields( 'notification_admin_benaceur_group_tw' ); 
@@ -116,11 +113,16 @@ function fonction_de_la_page_options() {
 	                    <textarea name="notification_admin_benaceur_text_tw" style="padding:6px" cols="90%" rows="6"><?php echo get_option('notification_admin_benaceur_text_tw'); ?></textarea>
                     </td>
                 </tr>
-                <tr>    
-                	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('All users', 'notification-admin-benaceur'); ?></th>
-                    <td>
-	                    <input type="checkbox" name="notification_admin_benaceur_for_users_tw" value="1" <?php if( get_option('notification_admin_benaceur_for_users_tw')) { echo 'checked="checked"'; } ?>/>
-                    </td>
+                <tr>  
+                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><label><?php _e('All users', 'notification-admin-benaceur'); ?></label></div></th>
+                    <td> 
+					<label class="switch-nab">				
+
+	                    <input type="checkbox" class="switch-input" name="notification_admin_benaceur_for_users_tw" value="1" <?php if( get_option('notification_admin_benaceur_for_users_tw')) { echo 'checked="checked"'; } ?>/>
+                        <span class="switch-label" data-on="On" data-off="Off"></span>
+                        <span class="switch-handle"></span>
+                   </label>
+				   </td>
                 </tr>
 				<tr>    
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Choose the group (You can select more than one group)', 'notification-admin-benaceur'); ?></th>
@@ -166,7 +168,7 @@ function fonction_de_la_page_options() {
 			?>
       <input type="submit" value="<?php _e('Click to reset properties plugin', 'notification-admin-benaceur');?>" class="button-secondary" />
     </form>
-            </br><hr width="40%" size="3"></br>
+            </br><center><div class="to-tr2"></div></center></br>
 </div>
 <input type='button'  id='bt1' class="button-secondary" value='<?php _e('Second text', 'notification-admin-benaceur'); ?>' onclick="setVisibility('sub3');";> 
 			<div id="sub4">
@@ -182,11 +184,16 @@ function fonction_de_la_page_options() {
 	                    <textarea name="notification_admin_benaceur_text_th" style="padding:6px" cols="90%" rows="6"><?php echo get_option('notification_admin_benaceur_text_th'); ?></textarea>
                     </td>
                 </tr>
-                <tr>    
-                	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('All users', 'notification-admin-benaceur'); ?></th>
-                    <td>
-	                    <input type="checkbox" name="notification_admin_benaceur_for_users_th" value="1" <?php if( get_option('notification_admin_benaceur_for_users_th')) { echo 'checked="checked"'; } ?>/>
-                    </td>
+                <tr>  
+                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><label><?php _e('All users', 'notification-admin-benaceur'); ?></label></div></th>
+                    <td> 
+					<label class="switch-nab">				
+
+	                    <input type="checkbox" class="switch-input" name="notification_admin_benaceur_for_users_th" value="1" <?php if( get_option('notification_admin_benaceur_for_users_th')) { echo 'checked="checked"'; } ?>/>
+                        <span class="switch-label" data-on="On" data-off="Off"></span>
+                        <span class="switch-handle"></span>
+                   </label>
+				   </td>
                 </tr>
 				<tr>    
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Choose the group (You can select more than one group)', 'notification-admin-benaceur'); ?></th>
@@ -236,7 +243,7 @@ function fonction_de_la_page_options() {
 		</div>
 <input type='button'  id='bt2' class="button-secondary" value='<?php _e('Third text', 'notification-admin-benaceur'); ?>' onclick="setVisibility2('sub4');";> 
 <div id="notification-admin-benaceur-font">
-            </br><hr width="40%" size="3"></br>
+             </br><center><div class="to-tr2"></div></center></br>
   <form id="myOptionsForm4" method="post" action="options.php" >
             <?php settings_fields( 'notification_admin_benaceur_group_sty' ); 
 				do_settings_sections( 'notification_admin_benaceur_group_sty' );
@@ -451,7 +458,7 @@ function fonction_de_la_page_options() {
 						</td>
 						<div class="colwrap-display"><td><?php _e("box shadow v",'notification-admin-benaceur'); ?> </td></div></br>
 					</tr>
-                    <hr width="200" size="3">
+                    <div class="to-tr"></div>
 					<tr>
 						<td>
 					<label class="switch-nab">				
