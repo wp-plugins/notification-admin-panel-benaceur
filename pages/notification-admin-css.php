@@ -30,7 +30,7 @@
     -webkit-border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
 	margin-top:<?php if (get_option( 'notification_admin_benaceur_margin_top' )) echo get_option( 'notification_admin_benaceur_margin_top'); else echo "0"; ?>px;
 	margin-bottom:<?php if (get_option( 'notification_admin_benaceur_margin_bottom' )) echo get_option( 'notification_admin_benaceur_margin_bottom'); else echo "0"; ?>px;
-    opacity:<?php if (get_option( 'notification_admin_benaceur_opacity' )) echo get_option( 'notification_admin_benaceur_opacity'); elseif (get_option( 'notification_admin_benaceur_opacity') == '0')  echo "0"; else echo "1"; ?>; 
+    opacity:<?php  echo get_option( 'notification_admin_benaceur_opacity'); ?>; 
  }
 .important-nab_a3 {
     font-family:<?php if (get_option( 'notification_admin_benaceur_font' )) echo get_option( 'notification_admin_benaceur_font' ) ; else  echo 'DroidKufi_Ben, Arial'; ?>;
