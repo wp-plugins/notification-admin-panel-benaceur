@@ -10,6 +10,7 @@
 }
 <?php } ?>
 .important-nab_a { 
+    background-color:<?php if (!get_option( 'notification_admin_benaceur_color_back' )) echo get_option( 'notification_admin_benaceur_color_back' ) ; else  echo '#FFFFFF'; ?>;
     line-height:2;
     border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
     -moz-border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
