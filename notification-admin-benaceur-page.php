@@ -79,14 +79,14 @@ function fonction_de_la_page_options() {
                     <th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Insert the user id', 'notification-admin-benaceur'); ?></th>
                     
                     <td>
-					<div class="sm_benaceurlist_caps_input"><input type="text" name="notification_admin_benaceur_for_user_id" placeholder="<?php _e( 'Enter here the user id', 'notification-admin-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_id'); ?>" /></div>
+					<div class="sm_benaceurlist_caps_input"><input style="font-weight:bold;" type="text" name="notification_admin_benaceur_for_user_id" placeholder="<?php _e( 'Enter here the user id', 'notification-admin-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_id'); ?>" /></div>
                     &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'notification-admin-benaceur' ); ?></em></td>
                     
                 </tr>
                 <tr>    
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Insert the user name', 'notification-admin-benaceur'); ?></th>
                     <td>
-					<div class="sm_benaceurlist_caps_input"><input type="text" name="notification_admin_benaceur_for_user_name" placeholder="<?php _e( 'Enter here the user name', 'notification-admin-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_name'); ?>" /></div>
+					<div class="sm_benaceurlist_caps_input"><input style="font-weight:bold;" type="text" name="notification_admin_benaceur_for_user_name" placeholder="<?php _e( 'Enter here the user name', 'notification-admin-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_name'); ?>" /></div>
                     &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'notification-admin-benaceur' ); ?></em></td>
 				   </td>
                 </tr>
@@ -480,9 +480,25 @@ function fonction_de_la_page_options() {
 			?>
       <input type="submit" value="<?php _e('Click to reset style properties plugin', 'notification-admin-benaceur');?>" class="button-secondary" />
     </form>
-			
     </div></div>
+	<a href="#top"><div id="to-top"></div></a>
 	
+<style type="text/css">
+#to-top {
+  height:60px;
+  width:60px;
+  <?php if ( is_rtl() ) { ?>
+  background: url(<?php echo '' . plugins_url( 'admin/top-r.png', __FILE__ ) . ''; ?>) no-repeat ;
+  float:left;
+  margin-left:100px;
+  <?php } else { ?>
+  background: url(<?php echo '' . plugins_url( 'admin/top-l.png', __FILE__ ) . ''; ?>) no-repeat ;
+  float:right;
+  margin-right:60px;
+  <?php } ?>
+  }
+</style>
+
 <script language="JavaScript">
 function setVisibility(id) {
 if(document.getElementById('bt1').value=='<?php _e('Hide second text', 'notification-admin-benaceur'); ?>'){
