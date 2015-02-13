@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.1.4
+Version: 1.1.5
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -13,14 +13,14 @@ define("NOTIFICATION_ADMIN_PANEL_BENACEUR", "Notification-Admin-Benaceur");
 
 // Add settings link on plugin page
 function admin_panel_benaceur_action_links($links){
-	$links[] = '<a href="'.get_admin_url(null, '?page='.NOTIFICATION_ADMIN_PANEL_BENACEUR.'').'">'.__("Settings", 'notification-admin-benaceur').'</a>';
+	$links[] = '<a href="'.get_admin_url(null, '?page='.NOTIFICATION_ADMIN_PANEL_BENACEUR.'').'">'.__("Settings", 'notification-admin-panel-benaceur').'</a>';
 	return $links;
 }
 add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'admin_panel_benaceur_action_links');
 // Add settings link on plugin page
 
 
-load_plugin_textdomain( 'notification-admin-benaceur', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+load_plugin_textdomain( 'notification-admin-panel-benaceur', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 
 add_action('admin_init', 'notification_admin_benaceur_register_options');
 
@@ -105,6 +105,7 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_box_shadow_v');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_disable_this_font');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_disable_clignotement');
+    register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_disable_b_close');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_default');
 	
 	    if( $_GET['page'] == 'Notification-Admin-Benaceur' ){

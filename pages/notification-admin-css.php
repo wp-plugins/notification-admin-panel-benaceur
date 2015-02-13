@@ -45,4 +45,28 @@
 	padding-left:6px;
 	visibility: visible; 
 }
+
+#close_nab { 
+    position:relative;
+	background-color:;
+	color:#000;
+	width:13px;
+    margin-bottom:-2px;
+	border-radius:4px;
+    border:1px solid transparent;
+	font-family:Arial;font-size:18px;font-weight:bold;text-align:center;
+	margin-top:-6px;
+    <?php if ( is_rtl() ) { ?>
+	float:right;
+	<?php } else { ?>
+	float:left;
+	<?php } ?>
+	
+	<?php if ( get_option( 'notification_admin_benaceur_disable_b_close' ) )  { ?>
+    display:none;
+	<?php } ?>
+}
+#close_nab:hover {
+    cursor:pointer;
+}
 </style>

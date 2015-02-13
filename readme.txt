@@ -3,7 +3,7 @@ Contributors: Benaceur
 Tags: Notification, message, admin, to display a message, display a message admin panel, show a message in control panel, display a message in control panel, notification control panel, notification in control panel, notification in admin panel, text control panel, text in admin panel
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 
 This plugin allows you to display a message or notice in the admin panel
@@ -34,6 +34,8 @@ TRANSLATED IN FOLLOWING LANGUAGES:
 
 == Changelog ==
 
+= 1.1.5 =
+* Some midifications.
 = 1.1.4 =
 * Simple additions in the style.
 = 1.1.3 =
