@@ -305,34 +305,34 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_top' )) echo get_option( 'notification_admin_benaceur_border_top'); elseif (get_option( 'notification_admin_benaceur_border_top') == '0')  echo "0"; else echo "1"; ?>" name="notification_admin_benaceur_border_top" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_top' )) echo get_option( 'notification_admin_benaceur_border_top'); else echo "1"; ?>" name="notification_admin_benaceur_border_top" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border top",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border top (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_bottom' )) echo get_option( 'notification_admin_benaceur_border_bottom'); elseif (get_option( 'notification_admin_benaceur_border_bottom') == '0')  echo "0"; else echo "1"; ?>" name="notification_admin_benaceur_border_bottom" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_bottom' )) echo get_option( 'notification_admin_benaceur_border_bottom'); else echo "1"; ?>" name="notification_admin_benaceur_border_bottom" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border bottom",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border bottom (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_right' )) echo get_option( 'notification_admin_benaceur_border_right'); elseif (get_option( 'notification_admin_benaceur_border_right') == '0')  echo "0"; else echo "1"; ?>" name="notification_admin_benaceur_border_right" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_right' )) echo get_option( 'notification_admin_benaceur_border_right'); else echo "1"; ?>" name="notification_admin_benaceur_border_right" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border right",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border right (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_left' )) echo get_option( 'notification_admin_benaceur_border_left'); elseif (get_option( 'notification_admin_benaceur_border_left') == '0')  echo "0"; else echo "1"; ?>" name="notification_admin_benaceur_border_left" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_left' )) echo get_option( 'notification_admin_benaceur_border_left'); else echo "1"; ?>" name="notification_admin_benaceur_border_left" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border left",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border left (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
@@ -345,7 +345,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_opacity' )) echo get_option( 'notification_admin_benaceur_opacity'); elseif (get_option( 'notification_admin_benaceur_opacity') == '0')  echo "0"; else echo "1"; ?>" name="notification_admin_benaceur_opacity" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_opacity' )) echo get_option( 'notification_admin_benaceur_opacity'); else echo "1"; ?>" name="notification_admin_benaceur_opacity" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("The level of transparency 1-0.1",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -458,7 +458,7 @@ function fonction_de_la_page_options() {
 						</td>
 						<div class="colwrap-display"><td><?php _e("box shadow v",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
-                    <div class="to-tr"></div>
+                    <div class="to-tr"></div></br>
 					<tr>
 						<td>
 					<label class="switch-nab">			
@@ -470,6 +470,7 @@ function fonction_de_la_page_options() {
                     <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("disable clignotement",'notification-admin-panel-benaceur'); ?></td></div>
 					</tr>
 					</br></br>
+                    <div class="to-tr"></div>
 					<tr>
 						<td>
 					<label class="switch-nab">			
@@ -479,8 +480,31 @@ function fonction_de_la_page_options() {
                    </label>
 						</td>
                     <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("disable button close x",'notification-admin-panel-benaceur'); ?></td></div>
-					</tr>
-					
+					</tr></br></br>
+					<?php $nab_disable_close = get_option('nab_disable_close');?>
+					<tr>
+						<td>
+                   <input type="radio" name="nab_disable_close" value="img" <?php if( $nab_disable_close == 'img')echo 'checked';?> >
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
+					</tr></br>
+					<tr> 
+						<td>
+                   <input type="radio" name="nab_disable_close" value="img1" <?php if( $nab_disable_close == 'img1')echo 'checked';?> >
+						</td>
+                    <div class="colwrap-display">&nbsp;&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
+					</tr></br>
+					<tr> 
+						<td>
+                   <input type="radio" name="nab_disable_close" value="img2" <?php if( $nab_disable_close == 'img2')echo 'checked';?> >
+						</td>
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben2.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
+					</tr></br>
+					<tr> 
+						<td>
+                   <input type="radio" name="nab_disable_close" value="img3" <?php if( $nab_disable_close == 'img3')echo 'checked';?> >
+						</td>
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben3.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
+					</tr></br>
 					</br></br><p><?php submit_button(); ?></p>
 				</div>	
 			</form>
