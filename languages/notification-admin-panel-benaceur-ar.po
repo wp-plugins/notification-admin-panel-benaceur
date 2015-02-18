@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Notification admin panel benaceur v1.1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-14 22:45:22+0000\n"
+"PO-Revision-Date: 2015-02-17 20:04:09+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -116,14 +116,14 @@ msgstr "انقر هنا لإعادة تعيين إعدادات الإضافة"
 
 #: notification-admin-benaceur-page.php:109
 #: notification-admin-benaceur-page.php:173
-#: notification-admin-benaceur-page.php:540
+#: notification-admin-benaceur-page.php:557
 #@ notification-admin-panel-benaceur
 msgid "Second text"
 msgstr "النص الثاني"
 
 #: notification-admin-benaceur-page.php:180
 #: notification-admin-benaceur-page.php:244
-#: notification-admin-benaceur-page.php:552
+#: notification-admin-benaceur-page.php:569
 #@ notification-admin-panel-benaceur
 msgid "Third text"
 msgstr "النص الثالث"
@@ -288,19 +288,19 @@ msgstr ""
 msgid "disable clignotement"
 msgstr "تعطيل الومض disable clignotement"
 
-#: notification-admin-benaceur-page.php:516
+#: notification-admin-benaceur-page.php:533
 #@ notification-admin-panel-benaceur
 msgid "Click to reset style properties plugin"
 msgstr "انقر لإعادة تعيين إعدادات الستايل"
 
-#: notification-admin-benaceur-page.php:539
-#: notification-admin-benaceur-page.php:543
+#: notification-admin-benaceur-page.php:556
+#: notification-admin-benaceur-page.php:560
 #@ notification-admin-panel-benaceur
 msgid "Hide second text"
 msgstr "إخفاء النص الثاني"
 
-#: notification-admin-benaceur-page.php:551
-#: notification-admin-benaceur-page.php:555
+#: notification-admin-benaceur-page.php:568
+#: notification-admin-benaceur-page.php:572
 #@ notification-admin-panel-benaceur
 msgid "Hide third text"
 msgstr "إخفاء النص الثالث"
@@ -334,4 +334,24 @@ msgstr "الإطار الأيمن (أدخل 00 لتعطيله)"
 #@ notification-admin-panel-benaceur
 msgid "border left (Enter 00 to disable it)"
 msgstr "الإطار الأيسر (أدخل 00 لتعطيله)"
+
+#: notification-admin-benaceur-page.php:511
+#@ notification-admin-panel-benaceur
+msgid "Hour(s)"
+msgstr "ساعة"
+
+#: notification-admin-benaceur-page.php:511
+#@ notification-admin-panel-benaceur
+msgid "Minute(s)"
+msgstr "دقيقة"
+
+#: notification-admin-benaceur-page.php:514
+#@ notification-admin-panel-benaceur
+msgid "Time to appear after closing"
+msgstr "وقت الظهور بعد الإغلاق"
+
+#: notification-admin-benaceur-page.php:522
+#@ notification-admin-panel-benaceur
+msgid "Enter the time (Enter 0 to disable)"
+msgstr "أدخل الوقت (أدخل 0 للتعطيل) "
 

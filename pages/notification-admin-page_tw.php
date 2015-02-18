@@ -3,16 +3,16 @@
 
 <div id="my_wellcome_panel">
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'center' ) { ?>
-<div align="center">
+<div align="center" id="nab">
 <?php } ?>
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'right' ) { ?>
-<div align="right">
+<div align="right" id="nab">
 <?php } ?>
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'left' ) { ?>
-<div align="left">
+<div align="left" id="nab">
 <?php } ?>
 
-<div class="important-nab_a2" id="my_wellcome_panel"><span id="close_nab">
+<div class="important-nab_a2" id="my_wellcome_panel"><span id="close_nab" onmouseup="setcookie('nab',1)">
 <?php if (get_option('nab_disable_close')=='img' || !get_option('nab_disable_close') ) { ?>
 <img border="0" src="<?php echo '' . plugins_url( '../admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16">
 <?php } elseif (get_option('nab_disable_close')=='img1') {  ?>
@@ -33,13 +33,9 @@
 
 </div>
 </div>
-<script type="text/javascript">
-document.getElementById("close_nab").addEventListener("click", function(e) {
-    e.preventDefault();
-    this.parentNode.style.display = "none";
-}, false);
-</script>
 
-<?php include('notification-admin-css.php'); ?>
+<?php include 'hide-cook.php'; 
+      include('notification-admin-css.php'); 
+?>
 
 

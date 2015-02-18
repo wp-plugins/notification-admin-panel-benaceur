@@ -44,7 +44,7 @@ function fonction_de_la_page_options() {
                     </td>
                 </tr>
                 <tr>  
-                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><label><?php _e('All users', 'notification-admin-panel-benaceur'); ?></label></div></th>
+                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><?php _e('All users', 'notification-admin-panel-benaceur'); ?></div></th>
                     <td> 
 					<label class="switch-nab">				
 
@@ -114,7 +114,7 @@ function fonction_de_la_page_options() {
                     </td>
                 </tr>
                 <tr>  
-                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><label><?php _e('All users', 'notification-admin-panel-benaceur'); ?></label></div></th>
+                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><?php _e('All users', 'notification-admin-panel-benaceur'); ?></div></th>
                     <td> 
 					<label class="switch-nab">				
 
@@ -185,7 +185,7 @@ function fonction_de_la_page_options() {
                     </td>
                 </tr>
                 <tr>  
-                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><label><?php _e('All users', 'notification-admin-panel-benaceur'); ?></label></div></th>
+                    <th style="font-size: 13px;font-weight:normal;" scope="row"><div class="dd"><?php _e('All users', 'notification-admin-panel-benaceur'); ?></div></th>
                     <td> 
 					<label class="switch-nab">				
 
@@ -245,7 +245,7 @@ function fonction_de_la_page_options() {
 <div id="notification-admin-benaceur-font">
              </br><center><div class="to-tr2"></div></center></br>
   <form id="myOptionsForm4" method="post" action="options.php" >
-            <?php settings_fields( 'notification_admin_benaceur_group_sty' ); 
+            <?php settings_fields( 'notification_admin_benaceur_group_sty'); 
 				do_settings_sections( 'notification_admin_benaceur_group_sty' );
 			?>
           </br><h3><?php _e('Style properties', 'notification-admin-panel-benaceur'); ?></h3></br>
@@ -484,14 +484,14 @@ function fonction_de_la_page_options() {
 					<?php $nab_disable_close = get_option('nab_disable_close');?>
 					<tr>
 						<td>
-                   <input type="radio" name="nab_disable_close" value="img" <?php if( $nab_disable_close == 'img')echo 'checked';?> >
+                   <input type="radio" name="nab_disable_close" value="img" <?php if( $nab_disable_close == 'img' || $nab_disable_close == '')echo 'checked';?> >
                     <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
 					</tr></br>
 					<tr> 
 						<td>
                    <input type="radio" name="nab_disable_close" value="img1" <?php if( $nab_disable_close == 'img1')echo 'checked';?> >
 						</td>
-                    <div class="colwrap-display">&nbsp;&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
 					</tr></br>
 					<tr> 
 						<td>
@@ -504,7 +504,24 @@ function fonction_de_la_page_options() {
                    <input type="radio" name="nab_disable_close" value="img3" <?php if( $nab_disable_close == 'img3')echo 'checked';?> >
 						</td>
                     <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben3.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
-					</tr></br>
+					</tr></br></br>
+					<tr>
+						<td>
+						<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
+						<div class="bold-3"><select   name="notification_admin_benaceur_time_a_show" class="notification-admin-benaceur-color-inp"><option value="hour" <?php selected('hour', get_option( 'notification_admin_benaceur_time_a_show' )); ?>><?php _e('Hour(s)', 'notification-admin-panel-benaceur'); ?></option><option value="minute" <?php selected('minute', get_option( 'notification_admin_benaceur_time_a_show' )); ?>><?php _e('Minute(s)', 'notification-admin-panel-benaceur'); ?></option></select></div>
+						</div></div>
+						</td>
+						<div class="colwrap-display"><td><?php _e("Time to appear after closing",'notification-admin-panel-benaceur'); ?> </td></div></br>
+					</tr>
+					<tr>
+						<td>
+							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_enter_time' )) echo get_option( 'notification_admin_benaceur_enter_time'); elseif (get_option( 'notification_admin_benaceur_enter_time') == '0')  echo "0"; else echo "0"; ?>" name="notification_admin_benaceur_enter_time" />
+							</div></div>
+						</td>
+						<div class="colwrap-display"><td><?php _e("Enter the time (Enter 0 to disable)",'notification-admin-panel-benaceur'); ?> </td></div></br>
+					</tr>
+                    <div class="to-tr"></div>
 					</br></br><p><?php submit_button(); ?></p>
 				</div>	
 			</form>
@@ -514,6 +531,7 @@ function fonction_de_la_page_options() {
 			do_settings_sections( 'notification_admin_benaceur_group_sty' );
 			?>
       <input type="submit" value="<?php _e('Click to reset style properties plugin', 'notification-admin-panel-benaceur');?>" class="button-secondary" />
+      <input type="hidden" name="nab_disable_close" value="img" <?php if( $nab_disable_close == '')echo 'checked';?> >
     </form>
     </div></div>
 	<a href="#top"><div id="to-top"></div></a>
