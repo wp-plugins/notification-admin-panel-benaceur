@@ -148,14 +148,14 @@ function fonction_de_la_page_options() {
                     <th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Insert the user id', 'notification-admin-panel-benaceur'); ?></th>
                     
                     <td>
-					<div class="sm_benaceurlist_caps_input"><input type="text" name="notification_admin_benaceur_for_user_id_tw" placeholder="<?php _e( 'Enter here the user id', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_id_tw'); ?>" /></div>
+					<div class="sm_benaceurlist_caps_input"><input style="font-weight:bold;" type="text" name="notification_admin_benaceur_for_user_id_tw" placeholder="<?php _e( 'Enter here the user id', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_id_tw'); ?>" /></div>
                     &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'notification-admin-panel-benaceur' ); ?></em></td>
                     
                 </tr>
                 <tr>    
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Insert the user name', 'notification-admin-panel-benaceur'); ?></th>
                     <td>
-					<div class="sm_benaceurlist_caps_input"><input type="text" name="notification_admin_benaceur_for_user_name_tw" placeholder="<?php _e( 'Enter here the user name', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_name_tw'); ?>" /></div>
+					<div class="sm_benaceurlist_caps_input"><input style="font-weight:bold;" type="text" name="notification_admin_benaceur_for_user_name_tw" placeholder="<?php _e( 'Enter here the user name', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_name_tw'); ?>" /></div>
                     &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'notification-admin-panel-benaceur' ); ?></em></td>
 				   </td>
                 </tr>
@@ -219,14 +219,14 @@ function fonction_de_la_page_options() {
                     <th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Insert the user id', 'notification-admin-panel-benaceur'); ?></th>
                     
                     <td>
-					<div class="sm_benaceurlist_caps_input"><input type="text" name="notification_admin_benaceur_for_user_id_th" placeholder="<?php _e( 'Enter here the user id', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_id_th'); ?>" /></div>
+					<div class="sm_benaceurlist_caps_input"><input style="font-weight:bold;" type="text" name="notification_admin_benaceur_for_user_id_th" placeholder="<?php _e( 'Enter here the user id', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_id_th'); ?>" /></div>
                     &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'notification-admin-panel-benaceur' ); ?></em></td>
                     
                 </tr>
                 <tr>    
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Insert the user name', 'notification-admin-panel-benaceur'); ?></th>
                     <td>
-					<div class="sm_benaceurlist_caps_input"><input type="text" name="notification_admin_benaceur_for_user_name_th" placeholder="<?php _e( 'Enter here the user name', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_name_th'); ?>" /></div>
+					<div class="sm_benaceurlist_caps_input"><input style="font-weight:bold;" type="text" name="notification_admin_benaceur_for_user_name_th" placeholder="<?php _e( 'Enter here the user name', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_name_th'); ?>" /></div>
                     &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'notification-admin-panel-benaceur' ); ?></em></td>
 				   </td>
                 </tr>
@@ -248,7 +248,15 @@ function fonction_de_la_page_options() {
             <?php settings_fields( 'notification_admin_benaceur_group_sty'); 
 				do_settings_sections( 'notification_admin_benaceur_group_sty' );
 			?>
-          </br><h3><?php _e('Style properties', 'notification-admin-panel-benaceur'); ?></h3></br>
+					<tr>
+						<td>
+						<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
+						<div class="bold-3"><select   name="notification_admin_benaceur_style" class="notification-admin-benaceur-color-inp"><option value="style1" <?php selected('style', get_option( 'notification_admin_benaceur_style' )); ?>><?php _e('style 1', 'notification-admin-panel-benaceur'); ?></option><option value="style2" <?php selected('style2', get_option( 'notification_admin_benaceur_style' )); ?>><?php _e('style 2', 'notification-admin-panel-benaceur'); ?></option><option value="style3" <?php selected('style3', get_option( 'notification_admin_benaceur_style' )); ?>><?php _e('style 3', 'notification-admin-panel-benaceur'); ?></option><option value="style4" <?php selected('style4', get_option( 'notification_admin_benaceur_style' )); ?>><?php _e('style 4', 'notification-admin-panel-benaceur'); ?></option></select></div>
+						</div></div>
+						</td>
+						<div class="colwrap-display"><td><?php _e("Styles",'notification-admin-panel-benaceur'); ?> </td></div></br>
+					</tr>
+          </br><h3><?php _e('Style properties ( style 1 )', 'notification-admin-panel-benaceur'); ?></h3></br>
 	<div class="option-box">
 					<tr>
 						<td>
@@ -264,7 +272,7 @@ function fonction_de_la_page_options() {
 						<div class="bold-3"><select   name="notification_admin_benaceur_text_align" class="notification-admin-benaceur-color-inp"><option value="center" <?php selected('center', get_option( 'notification_admin_benaceur_text_align' )); ?>><?php _e('centering', 'notification-admin-panel-benaceur'); ?></option><option value="right" <?php selected('right', get_option( 'notification_admin_benaceur_text_align' )); ?>><?php _e('right', 'notification-admin-panel-benaceur'); ?></option><option value="left" <?php selected('left', get_option( 'notification_admin_benaceur_text_align' )); ?>><?php _e('left', 'notification-admin-panel-benaceur'); ?></option></select></div>
 						</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("center/right/left of text",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("center/right/left of text (All styles)",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
@@ -291,7 +299,7 @@ function fonction_de_la_page_options() {
 								<div class="notification-admin-benaceur-colsel notification-admin-benaceur-txtclr_a"></div>
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("Text color",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("Text color (All styles)",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
@@ -394,7 +402,7 @@ function fonction_de_la_page_options() {
 						<td>
 							<div class="notification-admin-benaceur-colwrap2">
 								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_font' )) echo get_option( 'notification_admin_benaceur_font' ); else echo "DroidKufi_Ben, Arial"; ?>" name="notification_admin_benaceur_font" />
-						&nbsp;&nbsp;&nbsp;&nbsp;<?php _e("Font family",'notification-admin-panel-benaceur'); ?> /
+						&nbsp;&nbsp;&nbsp;&nbsp;<?php _e("Font family (All styles)",'notification-admin-panel-benaceur'); ?> /
                                <input type="checkbox"  value="enable" <?php checked('enable', get_option( 'notification_admin_benaceur_disable_this_font' )); ?> name="notification_admin_benaceur_disable_this_font" />
                         <?php _e("Disable this font: DroidKufi_Ben ",'notification-admin-panel-benaceur'); ?>
 							</div>
@@ -406,7 +414,7 @@ function fonction_de_la_page_options() {
 								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_font_size' )) echo get_option( 'notification_admin_benaceur_font_size' ); else echo "14"; ?>" name="notification_admin_benaceur_font_size" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("Font size",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("Font size (All styles)",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
@@ -484,8 +492,8 @@ function fonction_de_la_page_options() {
 					<?php $nab_disable_close = get_option('nab_disable_close');?>
 					<tr>
 						<td>
-                   <input type="radio" name="nab_disable_close" value="img" <?php if( $nab_disable_close == 'img' || $nab_disable_close == '')echo 'checked';?> >
-                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
+                   <input type="radio" name="nab_disable_close" value="img2" <?php if( $nab_disable_close == 'img2' || $nab_disable_close == '')echo 'checked';?> >
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben2.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
 					</tr></br>
 					<tr> 
 						<td>
@@ -495,9 +503,9 @@ function fonction_de_la_page_options() {
 					</tr></br>
 					<tr> 
 						<td>
-                   <input type="radio" name="nab_disable_close" value="img2" <?php if( $nab_disable_close == 'img2')echo 'checked';?> >
+                   <input type="radio" name="nab_disable_close" value="img" <?php if( $nab_disable_close == 'img')echo 'checked';?> >
 						</td>
-                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben2.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
 					</tr></br>
 					<tr> 
 						<td>
@@ -531,7 +539,8 @@ function fonction_de_la_page_options() {
 			do_settings_sections( 'notification_admin_benaceur_group_sty' );
 			?>
       <input type="submit" value="<?php _e('Click to reset style properties plugin', 'notification-admin-panel-benaceur');?>" class="button-secondary" />
-      <input type="hidden" name="nab_disable_close" value="img" <?php if( $nab_disable_close == '')echo 'checked';?> >
+      <input type="hidden" name="nab_disable_close" value="img2" <?php if( $nab_disable_close == '')echo 'checked';?> >
+      <input type="hidden" name="notification_admin_benaceur_style" value="style1" <?php echo get_option( 'notification_admin_benaceur_style' ) == 'style1'; ?> >
     </form>
     </div></div>
 	<a href="#top"><div id="to-top"></div></a>

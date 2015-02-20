@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.1.7
+Version: 1.1.8
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -78,6 +78,7 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_for_user_id_th');
     register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_for_user_name_th');
 	
+    register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_style');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_color_back');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_color_back2');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_align_msg');

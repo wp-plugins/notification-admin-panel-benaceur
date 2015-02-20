@@ -55,12 +55,12 @@
 	border-radius:4px;
     border:1px solid transparent;
 	font-family:Arial;font-size:18px;font-weight:bold;text-align:center;
-	margin-top:-7px;
+	margin-top:<?php if ($s1 || $s || $s4) echo "-7"; else echo "2"; ?>px;
     <?php if ( is_rtl() ) { ?>
-	margin-left:4px;
+	margin-left:<?php if ($s1 || $s) echo "5"; elseif ($s4) echo "-7"; else echo "-4"; ?>px;
 	float:left;
 	<?php } else { ?>
-	margin-right:4px;
+	margin-right:<?php if ($s1 || $s) echo "5"; elseif ($s4) echo "-7"; else echo "-4"; ?>px;
 	float:right;
 	<?php } ?>
 	
@@ -71,4 +71,11 @@
 #close_nab:hover {
     cursor:pointer;
 }
+
+.updated,.error,.update-nag {
+    font-family:<?php if (get_option( 'notification_admin_benaceur_font' )) echo get_option( 'notification_admin_benaceur_font' ) ; else  echo 'DroidKufi_Ben, Arial'; ?>;
+    font-size:<?php if (get_option( 'notification_admin_benaceur_font_size' )) echo get_option( 'notification_admin_benaceur_font_size' ) ; else  echo '14'; ?>px;
+    color:<?php if (get_option( 'notification_admin_benaceur_color_text' )) echo get_option( 'notification_admin_benaceur_color_text' ) ; else  echo '#000000'; ?>; 
+    text-align:<?php if (get_option( 'notification_admin_benaceur_text_align' )) echo get_option( 'notification_admin_benaceur_text_align' ) ; else  echo 'center'; ?>;
+}	
 </style>
