@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Notification admin panel benaceur v1.1.7\n"
+"Project-Id-Version: Notification admin panel benaceur v1.1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-20 16:34:01+0000\n"
+"PO-Revision-Date: 2015-02-22 21:31:44+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,363 +20,373 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: notification-admin-benaceur-page.php:18
+#: notification-admin-benaceur-page.php:19
 #: notification-admin-benaceur.php:16
 #@ notification-admin-panel-benaceur
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: notification-admin-benaceur-page.php:31
+#: notification-admin-benaceur-page.php:42
 #@ notification-admin-panel-benaceur
 msgid "Enable plugin"
 msgstr "تفعيل الإضافة"
 
-#: notification-admin-benaceur-page.php:39
+#: notification-admin-benaceur-page.php:50
 #@ notification-admin-panel-benaceur
 msgid "First text"
 msgstr "النص الأول"
 
-#: notification-admin-benaceur-page.php:40
-#: notification-admin-benaceur-page.php:111
-#: notification-admin-benaceur-page.php:182
+#: notification-admin-benaceur-page.php:51
+#: notification-admin-benaceur-page.php:122
+#: notification-admin-benaceur-page.php:193
 #@ notification-admin-panel-benaceur
 msgid "Enter your text"
 msgstr "أدخل النص"
 
-#: notification-admin-benaceur-page.php:43
+#: notification-admin-benaceur-page.php:54
 #@ notification-admin-panel-benaceur
 msgid "To return to the line add at the end of the line: &lt;/br>"
 msgstr "للرجوع إلى السطر أدخل في نهاية السطر: &lt;/br>"
-
-#: notification-admin-benaceur-page.php:47
-#: notification-admin-benaceur-page.php:117
-#: notification-admin-benaceur-page.php:188
-#@ notification-admin-panel-benaceur
-msgid "All users"
-msgstr "جميع المستخدمين (الأعضاء)"
 
 #: notification-admin-benaceur-page.php:58
 #: notification-admin-benaceur-page.php:128
 #: notification-admin-benaceur-page.php:199
 #@ notification-admin-panel-benaceur
+msgid "All users"
+msgstr "جميع المستخدمين (الأعضاء)"
+
+#: notification-admin-benaceur-page.php:69
+#: notification-admin-benaceur-page.php:139
+#: notification-admin-benaceur-page.php:210
+#@ notification-admin-panel-benaceur
 msgid "Choose the group (You can select more than one group)"
 msgstr "اختر المجموعة (يمكن تحديد أكثر من مجموعة)"
 
-#: notification-admin-benaceur-page.php:63
-#: notification-admin-benaceur-page.php:132
-#: notification-admin-benaceur-page.php:203
+#: notification-admin-benaceur-page.php:74
+#: notification-admin-benaceur-page.php:143
+#: notification-admin-benaceur-page.php:214
 #@ notification-admin-panel-benaceur
 msgid "Remove Selection"
 msgstr "إلغاء التحديد"
 
-#: notification-admin-benaceur-page.php:79
-#: notification-admin-benaceur-page.php:148
-#: notification-admin-benaceur-page.php:219
+#: notification-admin-benaceur-page.php:90
+#: notification-admin-benaceur-page.php:159
+#: notification-admin-benaceur-page.php:230
 #@ notification-admin-panel-benaceur
 msgid "Insert the user id"
 msgstr "أدخل رقم العضوية ID"
 
-#: notification-admin-benaceur-page.php:82
-#: notification-admin-benaceur-page.php:151
-#: notification-admin-benaceur-page.php:222
+#: notification-admin-benaceur-page.php:93
+#: notification-admin-benaceur-page.php:162
+#: notification-admin-benaceur-page.php:233
 #@ notification-admin-panel-benaceur
 msgid "Enter here the user id"
 msgstr "أدخل هنا رقم العضوية"
 
-#: notification-admin-benaceur-page.php:83
-#: notification-admin-benaceur-page.php:90
-#: notification-admin-benaceur-page.php:152
-#: notification-admin-benaceur-page.php:159
-#: notification-admin-benaceur-page.php:223
-#: notification-admin-benaceur-page.php:230
+#: notification-admin-benaceur-page.php:94
+#: notification-admin-benaceur-page.php:101
+#: notification-admin-benaceur-page.php:163
+#: notification-admin-benaceur-page.php:170
+#: notification-admin-benaceur-page.php:234
+#: notification-admin-benaceur-page.php:241
 #@ notification-admin-panel-benaceur
 msgid "Separate between id by commas, for example: 2,16,223"
 msgstr " افصل بين المعرفات بفاصلة (,) على سبيل المثال : 2,16,223"
 
-#: notification-admin-benaceur-page.php:87
-#: notification-admin-benaceur-page.php:156
-#: notification-admin-benaceur-page.php:227
+#: notification-admin-benaceur-page.php:98
+#: notification-admin-benaceur-page.php:167
+#: notification-admin-benaceur-page.php:238
 #@ notification-admin-panel-benaceur
 msgid "Insert the user name"
 msgstr "أدخل اسم المستخدم"
-
-#: notification-admin-benaceur-page.php:89
-#: notification-admin-benaceur-page.php:158
-#: notification-admin-benaceur-page.php:229
-#@ notification-admin-panel-benaceur
-msgid "Enter here the user name"
-msgstr "أدخل هنا اسم المستخدم"
 
 #: notification-admin-benaceur-page.php:100
 #: notification-admin-benaceur-page.php:169
 #: notification-admin-benaceur-page.php:240
 #@ notification-admin-panel-benaceur
+msgid "Enter here the user name"
+msgstr "أدخل هنا اسم المستخدم"
+
+#: notification-admin-benaceur-page.php:111
+#: notification-admin-benaceur-page.php:180
+#: notification-admin-benaceur-page.php:251
+#@ notification-admin-panel-benaceur
 msgid "Click to reset properties plugin"
 msgstr "انقر هنا لإعادة تعيين إعدادات الإضافة"
 
-#: notification-admin-benaceur-page.php:109
-#: notification-admin-benaceur-page.php:173
-#: notification-admin-benaceur-page.php:567
+#: notification-admin-benaceur-page.php:120
+#: notification-admin-benaceur-page.php:184
+#: notification-admin-benaceur-page.php:578
 #@ notification-admin-panel-benaceur
 msgid "Second text"
 msgstr "النص الثاني"
 
-#: notification-admin-benaceur-page.php:180
-#: notification-admin-benaceur-page.php:244
-#: notification-admin-benaceur-page.php:579
+#: notification-admin-benaceur-page.php:191
+#: notification-admin-benaceur-page.php:255
+#: notification-admin-benaceur-page.php:590
 #@ notification-admin-panel-benaceur
 msgid "Third text"
 msgstr "النص الثالث"
 
-#: notification-admin-benaceur-page.php:264
-#: notification-admin-benaceur-page.php:272
+#: notification-admin-benaceur-page.php:275
+#: notification-admin-benaceur-page.php:283
 #@ notification-admin-panel-benaceur
 msgid "centering"
 msgstr "توسيط"
 
-#: notification-admin-benaceur-page.php:264
-#: notification-admin-benaceur-page.php:272
+#: notification-admin-benaceur-page.php:275
+#: notification-admin-benaceur-page.php:283
 #@ notification-admin-panel-benaceur
 msgid "right"
 msgstr "يمين"
 
-#: notification-admin-benaceur-page.php:264
-#: notification-admin-benaceur-page.php:272
+#: notification-admin-benaceur-page.php:275
+#: notification-admin-benaceur-page.php:283
 #@ notification-admin-panel-benaceur
 msgid "left"
 msgstr "يسار"
 
-#: notification-admin-benaceur-page.php:267
+#: notification-admin-benaceur-page.php:278
 #@ notification-admin-panel-benaceur
 msgid "center/right/left of content"
 msgstr "توسيط/يمين/يسار المحتوى كله"
 
-#: notification-admin-benaceur-page.php:284
+#: notification-admin-benaceur-page.php:295
 #@ notification-admin-panel-benaceur
 msgid "Background color"
 msgstr "لون الخلفية"
 
-#: notification-admin-benaceur-page.php:293
+#: notification-admin-benaceur-page.php:304
 #@ notification-admin-panel-benaceur
 msgid "the color of the second background"
 msgstr "لون الخلفية الثانية"
 
-#: notification-admin-benaceur-page.php:311
+#: notification-admin-benaceur-page.php:322
 #@ notification-admin-panel-benaceur
 msgid "Border color"
 msgstr "لون الإطار border"
 
-#: notification-admin-benaceur-page.php:351
+#: notification-admin-benaceur-page.php:362
 #@ notification-admin-panel-benaceur
 msgid "border radius"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:359
+#: notification-admin-benaceur-page.php:370
 #@ notification-admin-panel-benaceur
 msgid "The level of transparency 1-0.1"
 msgstr "نسبة الشفافية، بين 1 و 0.1 "
 
-#: notification-admin-benaceur-page.php:367
+#: notification-admin-benaceur-page.php:378
 #@ notification-admin-panel-benaceur
 msgid "Width by adding: px or %"
 msgstr "العرض بإدخال px أو %"
 
-#: notification-admin-benaceur-page.php:375
+#: notification-admin-benaceur-page.php:386
 #@ notification-admin-panel-benaceur
 msgid "padding top"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:383
+#: notification-admin-benaceur-page.php:394
 #@ notification-admin-panel-benaceur
 msgid "padding bottom"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:391
+#: notification-admin-benaceur-page.php:402
 #@ notification-admin-panel-benaceur
 msgid "margin top"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:399
+#: notification-admin-benaceur-page.php:410
 #@ notification-admin-panel-benaceur
 msgid "margin bottom"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:407
+#: notification-admin-benaceur-page.php:418
 #@ notification-admin-panel-benaceur
 msgid "Disable this font: DroidKufi_Ben "
 msgstr "تعطيل هذا الخط: DroidKufi_Ben"
 
-#: notification-admin-benaceur-page.php:422
+#: notification-admin-benaceur-page.php:433
 #@ notification-admin-panel-benaceur
 msgid "Normal"
 msgstr "عادي"
 
-#: notification-admin-benaceur-page.php:422
+#: notification-admin-benaceur-page.php:433
 #@ notification-admin-panel-benaceur
 msgid "Bold"
 msgstr "عريض"
 
-#: notification-admin-benaceur-page.php:425
+#: notification-admin-benaceur-page.php:436
 #@ notification-admin-panel-benaceur
 msgid "Font weight"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:430
-#: notification-admin-benaceur-page.php:447
+#: notification-admin-benaceur-page.php:441
+#: notification-admin-benaceur-page.php:458
 #@ notification-admin-panel-benaceur
 msgid "no"
 msgstr "لا"
 
-#: notification-admin-benaceur-page.php:430
-#: notification-admin-benaceur-page.php:447
+#: notification-admin-benaceur-page.php:441
+#: notification-admin-benaceur-page.php:458
 #@ notification-admin-panel-benaceur
 msgid "yes"
 msgstr "نعم"
 
-#: notification-admin-benaceur-page.php:433
+#: notification-admin-benaceur-page.php:444
 #@ notification-admin-panel-benaceur
 msgid "text shadow"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:442
+#: notification-admin-benaceur-page.php:453
 #@ notification-admin-panel-benaceur
 msgid "text shadow color"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:450
+#: notification-admin-benaceur-page.php:461
 #@ notification-admin-panel-benaceur
 msgid "box shadow"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:459
+#: notification-admin-benaceur-page.php:470
 #@ notification-admin-panel-benaceur
 msgid "box shadow color"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:467
+#: notification-admin-benaceur-page.php:478
 #@ notification-admin-panel-benaceur
 msgid "box shadow v"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:478
+#: notification-admin-benaceur-page.php:489
 #@ notification-admin-panel-benaceur
 msgid "disable clignotement"
 msgstr "تعطيل الومض disable clignotement"
 
-#: notification-admin-benaceur-page.php:541
+#: notification-admin-benaceur-page.php:552
 #@ notification-admin-panel-benaceur
 msgid "Click to reset style properties plugin"
 msgstr "انقر لإعادة تعيين إعدادات الستايل"
 
-#: notification-admin-benaceur-page.php:566
-#: notification-admin-benaceur-page.php:570
+#: notification-admin-benaceur-page.php:577
+#: notification-admin-benaceur-page.php:581
 #@ notification-admin-panel-benaceur
 msgid "Hide second text"
 msgstr "إخفاء النص الثاني"
 
-#: notification-admin-benaceur-page.php:578
-#: notification-admin-benaceur-page.php:582
+#: notification-admin-benaceur-page.php:589
+#: notification-admin-benaceur-page.php:593
 #@ notification-admin-panel-benaceur
 msgid "Hide third text"
 msgstr "إخفاء النص الثالث"
 
-#: notification-admin-benaceur-page.php:17
+#: notification-admin-benaceur-page.php:18
 #@ notification-admin-panel-benaceur
 msgid "Notification Admin Panel Benaceur"
 msgstr ""
 
-#: notification-admin-benaceur-page.php:490
+#: notification-admin-benaceur-page.php:501
 #@ notification-admin-panel-benaceur
 msgid "disable button close x"
 msgstr "تعطيل زر الإغلاق x"
 
-#: notification-admin-benaceur-page.php:319
+#: notification-admin-benaceur-page.php:330
 #@ notification-admin-panel-benaceur
 msgid "border top (Enter 00 to disable it)"
 msgstr "الإطار العلوي (أدخل 00 لتعطيله)"
 
-#: notification-admin-benaceur-page.php:327
+#: notification-admin-benaceur-page.php:338
 #@ notification-admin-panel-benaceur
 msgid "border bottom (Enter 00 to disable it)"
 msgstr "الإطار السفلي (أدخل 00 لتعطيله)"
 
-#: notification-admin-benaceur-page.php:335
+#: notification-admin-benaceur-page.php:346
 #@ notification-admin-panel-benaceur
 msgid "border right (Enter 00 to disable it)"
 msgstr "الإطار الأيمن (أدخل 00 لتعطيله)"
 
-#: notification-admin-benaceur-page.php:343
+#: notification-admin-benaceur-page.php:354
 #@ notification-admin-panel-benaceur
 msgid "border left (Enter 00 to disable it)"
 msgstr "الإطار الأيسر (أدخل 00 لتعطيله)"
 
-#: notification-admin-benaceur-page.php:519
+#: notification-admin-benaceur-page.php:530
 #@ notification-admin-panel-benaceur
 msgid "Hour(s)"
 msgstr "ساعة"
 
-#: notification-admin-benaceur-page.php:519
+#: notification-admin-benaceur-page.php:530
 #@ notification-admin-panel-benaceur
 msgid "Minute(s)"
 msgstr "دقيقة"
 
-#: notification-admin-benaceur-page.php:522
+#: notification-admin-benaceur-page.php:533
 #@ notification-admin-panel-benaceur
 msgid "Time to appear after closing"
 msgstr "وقت الظهور بعد الإغلاق"
 
-#: notification-admin-benaceur-page.php:530
+#: notification-admin-benaceur-page.php:541
 #@ notification-admin-panel-benaceur
 msgid "Enter the time (Enter 0 to disable)"
 msgstr "أدخل الوقت (أدخل 0 للتعطيل) "
 
-#: notification-admin-benaceur-page.php:254
+#: notification-admin-benaceur-page.php:265
 #@ notification-admin-panel-benaceur
 msgid "style 1"
 msgstr "ستايل 1"
 
-#: notification-admin-benaceur-page.php:254
+#: notification-admin-benaceur-page.php:265
 #@ notification-admin-panel-benaceur
 msgid "style 2"
 msgstr "ستايل 2"
 
-#: notification-admin-benaceur-page.php:254
+#: notification-admin-benaceur-page.php:265
 #@ notification-admin-panel-benaceur
 msgid "style 3"
 msgstr "ستايل 3"
 
-#: notification-admin-benaceur-page.php:254
+#: notification-admin-benaceur-page.php:265
 #@ notification-admin-panel-benaceur
 msgid "style 4"
 msgstr "ستايل 4"
 
-#: notification-admin-benaceur-page.php:257
+#: notification-admin-benaceur-page.php:268
 #@ notification-admin-panel-benaceur
 msgid "Styles"
 msgstr "ستايلات"
 
-#: notification-admin-benaceur-page.php:259
+#: notification-admin-benaceur-page.php:270
 #@ notification-admin-panel-benaceur
 msgid "Style properties ( style 1 )"
 msgstr "خصائص الستايل ( ستايل 1 )"
 
-#: notification-admin-benaceur-page.php:275
+#: notification-admin-benaceur-page.php:286
 #@ notification-admin-panel-benaceur
 msgid "center/right/left of text (All styles)"
 msgstr "توسيط/يمين/يسار النص (كل الستايلات)"
 
-#: notification-admin-benaceur-page.php:302
+#: notification-admin-benaceur-page.php:313
 #@ notification-admin-panel-benaceur
 msgid "Text color (All styles)"
 msgstr "لون النص (كل الستايلات)"
 
-#: notification-admin-benaceur-page.php:405
+#: notification-admin-benaceur-page.php:416
 #@ notification-admin-panel-benaceur
 msgid "Font family (All styles)"
 msgstr "عائلة الخط (كل الستايلات)"
 
-#: notification-admin-benaceur-page.php:417
+#: notification-admin-benaceur-page.php:428
 #@ notification-admin-panel-benaceur
 msgid "Font size (All styles)"
 msgstr "حجم الخط (كل الستايلات)"
+
+#: notification-admin-benaceur-page.php:16
+#@ notification-admin-panel-benaceur
+msgid "After this update Click on F5 to purge the browser cache ( For those who have installed the previous version(s) )"
+msgstr "بعد هذا التحديث اضغط على F5 لتفريغ كاش المتصفح ( بالنسبة للذين قاموا بتنصيب الإصدار أو الإصدارات السابقة فقط )"
+
+#: notification-admin-benaceur-page.php:25
+#@ default
+msgid "Settings saved."
+msgstr ""
 

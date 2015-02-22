@@ -13,9 +13,20 @@ function fonction_de_la_page_options() {
         $roles = array_map( 'translate_user_role', $roles );
 
 ?>
+</br><div id="message" class="updated" style="padding:10px;margin:20px"><?php _e('After this update Click on F5 to purge the browser cache ( For those who have installed the previous version(s) )', 'notification-admin-panel-benaceur'); ?></div>
     <div id="wpcontent-benaceur-nab"><div id="wpcontent-benaceur-nab-top"></div>
             <h2><?php _e('Notification Admin Panel Benaceur', 'notification-admin-panel-benaceur'); ?></h2>
         <h3><?php _e('Settings', 'notification-admin-panel-benaceur'); ?></h3>
+<!-- hide/show settings updated -->		
+<?php if( isset($_GET['settings-updated']) && $_GET['page'] == 'Notification-Admin-Benaceur' ) { ?>
+	<script <?php echo 'src="' . plugins_url( 'admin/min-ben.js', __FILE__ ) . '"'; ?>></script>
+      <div id="Slider_nib" class="slideup_nib">
+    <div id="h-s-msg-nab" id="message" class="updated" style="background:#B3006B;color:white;">
+        <p><strong><?php _e('Settings saved.') ?></strong></p>
+    </div>
+      </div>
+<?php } ?>
+<!-- hide/show settings updated -->		
         <form id="myOptionsForm1" method="post" action="options.php"  >
             <?php settings_fields( 'notification_admin_benaceur_group' ); 
 				do_settings_sections( 'notification_admin_benaceur_group' );
