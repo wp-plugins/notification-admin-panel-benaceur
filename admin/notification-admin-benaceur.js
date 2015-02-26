@@ -40,3 +40,10 @@ document.getElementById("slidedown_nib slideup_nib").style.display = "block";
 }
 setTimeout("showIt_nib()",600);
 // h settings-updated 5 seconds later			
+
+// style select for opera (nab)			
+var isOpera_nab = !!window.opera || navigator.userAgent.indexOf(" OPR/") >= 0;
+if (isOpera_nab) {
+document.write("<style>#wpcontent-benaceur-nab select {color:#000;background-color:#909090;}</style>");
+}
+// style select for opera (nab)			

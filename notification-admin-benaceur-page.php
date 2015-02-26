@@ -13,7 +13,6 @@ function fonction_de_la_page_options() {
         $roles = array_map( 'translate_user_role', $roles );
 
 ?>
-</br><div id="message" class="updated" style="padding:10px;margin:20px"><?php _e('After this update Click on F5 to purge the browser cache ( For those who have installed the previous version(s) )', 'notification-admin-panel-benaceur'); ?></div>
     <div id="wpcontent-benaceur-nab"><div id="wpcontent-benaceur-nab-top"></div>
             <h2><?php _e('Notification Admin Panel Benaceur', 'notification-admin-panel-benaceur'); ?></h2>
         <h3><?php _e('Settings', 'notification-admin-panel-benaceur'); ?></h3>

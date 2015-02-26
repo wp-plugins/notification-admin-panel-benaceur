@@ -9,16 +9,16 @@ $s4 = get_option('notification_admin_benaceur_style') == 'style4';
 <?php if ($s1 || $s) { ?>
 <div id="my_wellcome_panel">
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'center' ) { ?>
-<div align="center" id="nab">
+<div align="center" id="nab1">
 <?php } ?>
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'right' ) { ?>
-<div align="right" id="nab">
+<div align="right" id="nab1">
 <?php } ?>
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'left' ) { ?>
-<div align="left" id="nab">
+<div align="left" id="nab1">
 <?php } ?>
 
-<div class="important-nab_a2" id="my_wellcome_panel"><span id="close_nab" onmouseup="setcookie('nab',1)">
+<div class="important-nab_a2" id="my_wellcome_panel"><span id="close_nab" onmouseup="setcookie('nab1',1)">
 <?php if (get_option('nab_disable_close')=='img2' || !get_option('nab_disable_close') ) { ?>
 <img border="0" src="<?php echo '' . plugins_url( '../admin/close/close_ben2.png', __FILE__ ) . ''; ?>" width="16" height="16">
 <?php } elseif (get_option('nab_disable_close')=='img1') {  ?>
@@ -43,19 +43,19 @@ $s4 = get_option('notification_admin_benaceur_style') == 'style4';
 
 <div id="my_wellcome_panel">
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'center' ) { ?>
-<div align="center" id="nab" 
+<div align="center" id="nab1" 
 <?php if ($s2) { ?> class="updated" <?php } elseif ($s3) { ?> class="error" <?php } elseif ($s4) { ?> class="update-nag" <?php } ?>>
 <?php } ?>
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'right' ) { ?>
-<div align="right" id="nab"
+<div align="right" id="nab1"
 <?php if ($s2) { ?> class="updated" <?php } elseif ($s3) { ?> class="error" <?php } elseif ($s4) { ?> class="update-nag" <?php } ?>>
 <?php } ?>
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'left' ) { ?>
-<div align="left" id="nab"
+<div align="left" id="nab1"
 <?php if ($s2) { ?> class="updated" <?php } elseif ($s3) { ?> class="error" <?php } elseif ($s4) { ?> class="update-nag" <?php } ?>>
 <?php } ?>
 
-<span id="close_nab" onmouseup="setcookie('nab',1)">
+<span id="close_nab" onmouseup="setcookie('nab1',1)">
 <?php if (get_option('nab_disable_close')=='img2' || !get_option('nab_disable_close') ) { ?>
 <img border="0" src="<?php echo '' . plugins_url( '../admin/close/close_ben2.png', __FILE__ ) . ''; ?>" width="16" height="16">
 <?php } elseif (get_option('nab_disable_close')=='img1') {  ?>
