@@ -43,8 +43,24 @@ function fonction_de_la_page_options() {
 	</tr>
 </table>
 
-			<table class="form-table">
 <center><div class="to-tr2"></div></center>
+</br>
+<div id="notification-admin-benaceur-font">
+<table>
+					<tr>
+						<td>
+						<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
+						<div class="bold-3"><select style="min-width:110px;text-align:center;"  name="notification_admin_benaceur_links_admin_bar_menu" class="notification-admin-benaceur-color-inp"><option value="menu" <?php selected('menu', get_option( 'notification_admin_benaceur_links_admin_bar_menu' )); ?>><?php _e('Menu', 'notification-admin-panel-benaceur'); ?></option><option value="submenu" <?php selected('submenu', get_option( 'notification_admin_benaceur_links_admin_bar_menu' )); ?>><?php _e('Submenu', 'notification-admin-panel-benaceur'); ?></option></select></div>
+						</div></div>
+						</td>
+					</tr>
+<tr valign="top"><td  scope="row"><?php _e('Enable Notif-Admin-Benaceur on admin bar in frontend', 'notification-admin-panel-benaceur'); ?></td><td><label class="switch-nab"><input type="checkbox" name="notification_admin_benaceur_links_admin_bar_front" class="switch-input" id="notification_admin_benaceur_links_admin_bar_front" value="1"<?php if( get_option('notification_admin_benaceur_links_admin_bar_front')) { echo 'checked="checked"'; } ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
+<tr valign="top"><td scope="row"><?php _e('Enable Notif-Admin-Benaceur on admin bar in admin panel', 'notification-admin-panel-benaceur'); ?></td><td><label class="switch-nab"><input type="checkbox" name="notification_admin_benaceur_links_admin_bar_admin" class="switch-input" id="notification_admin_benaceur_links_admin_bar_admin" value="1"<?php if( get_option('notification_admin_benaceur_links_admin_bar_admin')) { echo 'checked="checked"'; } ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
+</table>
+</div>
+</br>
+<center><div class="to-tr2"></div></center>
+			<table class="form-table">
                 <tr> 
 <h3 align="center"><font color="#008080"><?php _e('First text', 'notification-admin-panel-benaceur'); ?></font></h3>
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Enter your text', 'notification-admin-panel-benaceur'); ?></th>
