@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.2.1
+Version: 1.2.2
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -420,13 +420,13 @@ add_action( 'admin_init', 'nab_form_admin_scripts' );
     add_action( 'admin_bar_menu', 'nab_links_on_admin_bar', 10145 );
     function nab_links_on_admin_bar($wp_admin_bar) {
 
-        if (current_user_can( 'manage_options' ) && get_option( 'notification_admin_benaceur_links_admin_bar_front') && !is_admin() && get_option( 'msg_interface_benaceur_enable')) {
+        if (current_user_can( 'manage_options' ) && get_option( 'notification_admin_benaceur_links_admin_bar_front') && !is_admin() && get_option( 'notification_admin_benaceur_enable_plug')) {
 if (get_option( 'notification_admin_benaceur_links_admin_bar_menu') == 'menu' || get_option( 'notification_admin_benaceur_links_admin_bar_menu') == '') {
 $wp_admin_bar->add_menu( array( 'id' => 'PLB5', 'title' => __('Notif-Admin-Benaceur'), 'href' => admin_url('/admin.php?page=Notification-Admin-Benaceur' ) ) );
 } elseif (get_option( 'notification_admin_benaceur_links_admin_bar_menu') == 'submenu' ) { 
 $wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'PLB6', 'title' => __('Notif-Admin-Benaceur'), 'href' => admin_url('/admin.php?page=Notification-Admin-Benaceur' ) ) );
 }
-		} elseif (current_user_can( 'manage_options' ) && get_option( 'notification_admin_benaceur_links_admin_bar_admin') && is_admin() && get_option( 'msg_interface_benaceur_enable'))  {
+		} elseif (current_user_can( 'manage_options' ) && get_option( 'notification_admin_benaceur_links_admin_bar_admin') && is_admin() && get_option( 'notification_admin_benaceur_enable_plug'))  {
 if (get_option( 'notification_admin_benaceur_links_admin_bar_menu') == 'menu' || get_option( 'notification_admin_benaceur_links_admin_bar_menu') == '') {
 $wp_admin_bar->add_menu( array( 'id' => 'PLB7', 'title' => __('Notif-Admin-Benaceur'), 'href' => admin_url('/admin.php?page=Notification-Admin-Benaceur' ) ) );
 } elseif (get_option( 'notification_admin_benaceur_links_admin_bar_menu') == 'submenu') { 
@@ -437,11 +437,16 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB8', 'title'
 // admin_bar
 
 // ADMIN NOTICES
-    $plugin_data = get_plugin_data( __FILE__ );
-		
-    if ( $plugin_data['Version'] == '1.2' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
+    add_action( 'admin_init', 'notification_admin_benaceur_admin_notices' );
+    function notification_admin_benaceur_admin_notices() {
+	if ( function_exists( 'get_plugin_data' ) ) {
+    $plugin_data_nab = get_plugin_data( __FILE__ );
+
+    if ( $plugin_data_nab['Version'] == '1.2' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
     include ('pages/notices-nab.php');
-    }	
+    }
+	}
+	}
 // ADMIN NOTICES
 
 require ('notification-admin-benaceur-page.php');
