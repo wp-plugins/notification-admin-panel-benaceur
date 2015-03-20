@@ -16,10 +16,10 @@
 }
 .important-nab_a2 { 
     background-color:<?php if (get_option( 'notification_admin_benaceur_color_back2' )) echo get_option( 'notification_admin_benaceur_color_back2' ) ; else  echo '#f5d6d6'; ?>;
-    border-top:<?php if (get_option( 'notification_admin_benaceur_border_top' )) echo get_option( 'notification_admin_benaceur_border_top'); else echo "1"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
-    border-bottom:<?php if (get_option( 'notification_admin_benaceur_border_bottom' )) echo get_option( 'notification_admin_benaceur_border_bottom'); else echo "1"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
-    border-right:<?php if (get_option( 'notification_admin_benaceur_border_right' )) echo get_option( 'notification_admin_benaceur_border_right'); else echo "1"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
-    border-left:<?php if (get_option( 'notification_admin_benaceur_border_left' )) echo get_option( 'notification_admin_benaceur_border_left'); else echo "1"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
+    border-top:<?php $border_top=get_option( 'notification_admin_benaceur_border_top' ); if (!empty($border_top)) echo $border_top; elseif ($border_top == '') echo "1"; else echo "0"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
+    border-bottom:<?php $border_bottom=get_option( 'notification_admin_benaceur_border_bottom' ); if (!empty($border_bottom)) echo $border_bottom; elseif ($border_bottom == '') echo "1"; else echo "0"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
+    border-right:<?php $border_right=get_option( 'notification_admin_benaceur_border_right' ); if (!empty($border_right)) echo $border_right; elseif ($border_right == '') echo "1"; else echo "0"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
+    border-left:<?php $border_left=get_option( 'notification_admin_benaceur_border_left' ); if (!empty($border_left)) echo $border_left; elseif ($border_left == '') echo "1"; else echo "0"; ?>px solid <?php if (get_option( 'notification_admin_benaceur_color_border' )) echo get_option( 'notification_admin_benaceur_color_border' ) ; else  echo '#CE1031'; ?>;
 	box-shadow:<?php echo get_option('notification_admin_benaceur_box_shadow'); ?> <?php if (get_option( 'notification_admin_benaceur_box_shadow_v' )) echo get_option( 'notification_admin_benaceur_box_shadow_v'); elseif (get_option( 'notification_admin_benaceur_box_shadow_v') == '0')  echo "0"; else echo "4"; ?>px <?php if (get_option( 'notification_admin_benaceur_box_shadow_color' )) echo get_option( 'notification_admin_benaceur_box_shadow_color' ) ; else  echo '#888888'; ?>;
 	line-height:2;
     border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
@@ -37,8 +37,8 @@
     font-weight:<?php echo get_option('notification_admin_benaceur_font_weight') ;?>;
     text-align:<?php if (get_option( 'notification_admin_benaceur_text_align' )) echo get_option( 'notification_admin_benaceur_text_align' ) ; else  echo 'center'; ?>;
 	text-shadow:<?php echo get_option('notification_admin_benaceur_text_shadow'); ?> <?php if (get_option( 'notification_admin_benaceur_text_shadow_color' )) echo get_option( 'notification_admin_benaceur_text_shadow_color' ) ; else  echo '#000000'; ?>;
-	padding-top:<?php if (get_option( 'notification_admin_benaceur_padding_top' )) echo get_option( 'notification_admin_benaceur_padding_top'); elseif (get_option( 'notification_admin_benaceur_padding_top') == '0')  echo "0"; else echo "1"; ?>px;
-	padding-bottom:<?php if (get_option( 'notification_admin_benaceur_padding_bottom' )) echo get_option( 'notification_admin_benaceur_padding_bottom'); elseif (get_option( 'notification_admin_benaceur_padding_bottom') == '0')  echo "0"; else echo "1"; ?>px;
+	padding-top:<?php $padding_top=get_option( 'notification_admin_benaceur_padding_top' ); if (!empty($padding_top)) echo $padding_top; elseif ($padding_top == '') echo "1"; else echo "0"; ?>px;
+	padding-bottom:<?php $padding_bottom=get_option( 'notification_admin_benaceur_padding_bottom' ); if (!empty($padding_bottom)) echo $padding_bottom; elseif ($padding_bottom == '') echo "1"; else echo "0"; ?>px;
 	padding-right:6px;
 	padding-left:6px;
 	visibility: visible; 

@@ -339,34 +339,34 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_top' )) echo get_option( 'notification_admin_benaceur_border_top'); else echo "1"; ?>" name="notification_admin_benaceur_border_top" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php $border_top=get_option( 'notification_admin_benaceur_border_top' ); if (!empty($border_top)) echo $border_top; elseif ($border_top == '') echo "1"; else echo "0"; ?>" name="notification_admin_benaceur_border_top" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border top (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border top",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_bottom' )) echo get_option( 'notification_admin_benaceur_border_bottom'); else echo "1"; ?>" name="notification_admin_benaceur_border_bottom" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php $border_bottom=get_option( 'notification_admin_benaceur_border_bottom' ); if (!empty($border_bottom)) echo $border_bottom; elseif ($border_bottom == '') echo "1"; else echo "0"; ?>" name="notification_admin_benaceur_border_bottom" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border bottom (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border bottom",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_right' )) echo get_option( 'notification_admin_benaceur_border_right'); else echo "1"; ?>" name="notification_admin_benaceur_border_right" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php $border_right=get_option( 'notification_admin_benaceur_border_right' ); if (!empty($border_right)) echo $border_right; elseif ($border_right == '') echo "1"; else echo "0"; ?>" name="notification_admin_benaceur_border_right" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border right (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border right",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_border_left' )) echo get_option( 'notification_admin_benaceur_border_left'); else echo "1"; ?>" name="notification_admin_benaceur_border_left" />
+								<input type="text" id="notification-admin-benaceur-txtclr_a" class="notification-admin-benaceur-color-inp" value="<?php $border_left=get_option( 'notification_admin_benaceur_border_left' ); if (!empty($border_left)) echo $border_left; elseif ($border_left == '') echo "1"; else echo "0"; ?>" name="notification_admin_benaceur_border_left" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border left (Enter 00 to disable it)",'notification-admin-panel-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border left",'notification-admin-panel-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
@@ -379,7 +379,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_opacity' )) echo get_option( 'notification_admin_benaceur_opacity'); else echo "1"; ?>" name="notification_admin_benaceur_opacity" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_opacity' )) echo get_option( 'notification_admin_benaceur_opacity'); else echo "1"; ?>" name="notification_admin_benaceur_opacity" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("The level of transparency 1-0.1",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -387,7 +387,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_width' )) echo get_option( 'notification_admin_benaceur_width' ); else echo "100%"; ?>" name="notification_admin_benaceur_width" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_width' )) echo get_option( 'notification_admin_benaceur_width' ); else echo "100%"; ?>" name="notification_admin_benaceur_width" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("Width by adding: px or %",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -395,7 +395,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_padding_top' )) echo get_option( 'notification_admin_benaceur_padding_top'); elseif (get_option( 'notification_admin_benaceur_padding_top') == '0')  echo "0"; else echo "1"; ?>" name="notification_admin_benaceur_padding_top" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php $padding_top=get_option( 'notification_admin_benaceur_padding_top' ); if (!empty($padding_top)) echo $padding_top; elseif ($padding_top == '') echo "1"; else echo "0"; ?>" name="notification_admin_benaceur_padding_top" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("padding top",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -403,7 +403,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_padding_bottom' )) echo get_option( 'notification_admin_benaceur_padding_bottom'); elseif (get_option( 'notification_admin_benaceur_padding_bottom') == '0')  echo "0"; else echo "1"; ?>" name="notification_admin_benaceur_padding_bottom" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php $padding_bottom=get_option( 'notification_admin_benaceur_padding_bottom' ); if (!empty($padding_bottom)) echo $padding_bottom; elseif ($padding_bottom == '') echo "1"; else echo "0"; ?>" name="notification_admin_benaceur_padding_bottom" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("padding bottom",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -411,7 +411,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_margin_top' )) echo get_option( 'notification_admin_benaceur_margin_top'); else echo "0"; ?>" name="notification_admin_benaceur_margin_top" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_margin_top' )) echo get_option( 'notification_admin_benaceur_margin_top'); else echo "0"; ?>" name="notification_admin_benaceur_margin_top" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("margin top",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -419,7 +419,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_margin_bottom' )) echo get_option( 'notification_admin_benaceur_margin_bottom'); else echo "0"; ?>" name="notification_admin_benaceur_margin_bottom" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_margin_bottom' )) echo get_option( 'notification_admin_benaceur_margin_bottom'); else echo "0"; ?>" name="notification_admin_benaceur_margin_bottom" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("margin bottom",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -427,7 +427,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="notification-admin-benaceur-colwrap2">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_font' )) echo get_option( 'notification_admin_benaceur_font' ); else echo "DroidKufi_Ben, Arial"; ?>" name="notification_admin_benaceur_font" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_font' )) echo get_option( 'notification_admin_benaceur_font' ); else echo "DroidKufi_Ben, Arial"; ?>" name="notification_admin_benaceur_font" />
 						&nbsp;&nbsp;&nbsp;&nbsp;<?php _e("Font family (All styles)",'notification-admin-panel-benaceur'); ?> /
                                <input type="checkbox"  value="enable" <?php checked('enable', get_option( 'notification_admin_benaceur_disable_this_font' )); ?> name="notification_admin_benaceur_disable_this_font" />
                         <?php _e("Disable this font: DroidKufi_Ben ",'notification-admin-panel-benaceur'); ?>
@@ -437,7 +437,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_font_size' )) echo get_option( 'notification_admin_benaceur_font_size' ); else echo "14"; ?>" name="notification_admin_benaceur_font_size" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_font_size' )) echo get_option( 'notification_admin_benaceur_font_size' ); else echo "14"; ?>" name="notification_admin_benaceur_font_size" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("Font size (All styles)",'notification-admin-panel-benaceur'); ?> </td></div></br>

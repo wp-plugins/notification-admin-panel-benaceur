@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Notification admin panel benaceur v1.2\n"
+"Project-Id-Version: Notification admin panel benaceur v1.2.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-28 10:38:25+0000\n"
+"PO-Revision-Date: 2015-03-20 17:02:38+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -169,7 +169,7 @@ msgstr "لون الإطار border"
 #: notification-admin-benaceur-page.php:377
 #@ notification-admin-panel-benaceur
 msgid "border radius"
-msgstr ""
+msgstr "زوايا الإطار"
 
 #: notification-admin-benaceur-page.php:385
 #@ notification-admin-panel-benaceur
@@ -290,26 +290,6 @@ msgstr ""
 msgid "disable button close x"
 msgstr "تعطيل زر الإغلاق x"
 
-#: notification-admin-benaceur-page.php:345
-#@ notification-admin-panel-benaceur
-msgid "border top (Enter 00 to disable it)"
-msgstr "الإطار العلوي (أدخل 00 لتعطيله)"
-
-#: notification-admin-benaceur-page.php:353
-#@ notification-admin-panel-benaceur
-msgid "border bottom (Enter 00 to disable it)"
-msgstr "الإطار السفلي (أدخل 00 لتعطيله)"
-
-#: notification-admin-benaceur-page.php:361
-#@ notification-admin-panel-benaceur
-msgid "border right (Enter 00 to disable it)"
-msgstr "الإطار الأيمن (أدخل 00 لتعطيله)"
-
-#: notification-admin-benaceur-page.php:369
-#@ notification-admin-panel-benaceur
-msgid "border left (Enter 00 to disable it)"
-msgstr "الإطار الأيسر (أدخل 00 لتعطيله)"
-
 #: notification-admin-benaceur-page.php:545
 #@ notification-admin-panel-benaceur
 msgid "Hour(s)"
@@ -414,4 +394,32 @@ msgstr "قائمة رئيسية"
 #@ notification-admin-panel-benaceur
 msgid "Submenu"
 msgstr "قائمة فرعية"
+
+#: notification-admin-benaceur-page.php:345
+#@ notification-admin-panel-benaceur
+msgid "border top"
+msgstr "الإطار العلوي"
+
+#: notification-admin-benaceur-page.php:353
+#@ notification-admin-panel-benaceur
+msgid "border bottom"
+msgstr "الإطار السفلي"
+
+#: notification-admin-benaceur-page.php:361
+#@ notification-admin-panel-benaceur
+msgid "border right"
+msgstr "الإطار الأيمن"
+
+#: notification-admin-benaceur-page.php:369
+#@ notification-admin-panel-benaceur
+msgid "border left"
+msgstr "الإطار الأيسر"
+
+#: notification-admin-benaceur.php:425
+#: notification-admin-benaceur.php:427
+#: notification-admin-benaceur.php:431
+#: notification-admin-benaceur.php:433
+#@ default
+msgid "Notif-Admin-Benaceur"
+msgstr ""
 
