@@ -22,7 +22,7 @@ TRANSLATED IN FOLLOWING LANGUAGES:
 
 1. Upload notification admin panel benaceur to the "/wp-content/plugins/"
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Activate the plugin again in the control panel (the plugin page).
+3. Activate the plugin again in the control panel (the plugin page)
 4. Adjust your settings in Admin Panel.
 
 == Screenshots ==
