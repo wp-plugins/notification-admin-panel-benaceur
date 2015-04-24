@@ -2,7 +2,7 @@
 Contributors: Benaceur 
 Tags: Notification, message, admin, to display a message, display a message admin panel, show a message in control panel, display a message in control panel, notification control panel, notification in control panel, notification in admin panel, text control panel, text in admin panel
 Requires at least: 3.0
-Tested up to: 4.1.1
+Tested up to: 4.2
 Stable tag: 1.2.3
 License: GPLv2 or later
 
