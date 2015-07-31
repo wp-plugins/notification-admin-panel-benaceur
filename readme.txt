@@ -14,7 +14,7 @@ to a particular group or a member by his user id or username.
 This plugin allows you to display a message or notice in the admin panel. 
 with the option to change the style properties such as color, font ... 
 and also the ability to display the message to a particular group or a member by his user id or username.
-TRANSLATED IN FOLLOWING LANGUAGES:
+TRANSLATED IN FOLLOWING LANGUAGES :
 - Arabic
 - English
 

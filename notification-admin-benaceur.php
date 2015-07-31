@@ -442,7 +442,7 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB8', 'title'
 	if ( function_exists( 'get_plugin_data' ) ) {
     $plugin_data_nab = get_plugin_data( __FILE__ );
 
-    if ( $plugin_data_nab['Version'] == '1.2' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
+    if ( $plugin_data_nab['Version'] == '1.2.1' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
     include ('pages/notices-nab.php');
     }
 	}
