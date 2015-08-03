@@ -70,7 +70,7 @@
     cursor:pointer;
 }
 
-.updated,.error,.update-nag {
+#nab1.updated,#nab1.error,#nab1.update-nag {
     font-family:<?php if (get_option( 'notification_admin_benaceur_font' )) echo get_option( 'notification_admin_benaceur_font' ) ; else  echo 'DroidKufi_Ben, Arial'; ?>;
     font-size:<?php if (get_option( 'notification_admin_benaceur_font_size' )) echo get_option( 'notification_admin_benaceur_font_size' ) ; else  echo '14'; ?>px;
     color:<?php if (get_option( 'notification_admin_benaceur_color_text' )) echo get_option( 'notification_admin_benaceur_color_text' ) ; else  echo '#000000'; ?>; 
