@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.2.5
+Version: 1.2.6
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -31,7 +31,7 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
   }
 }
   if (get_option( 'notification_admin_benaceur_enable_plug' )) {
-  if ( get_option( 'notification_admin_benaceur_pages_admin1') == 'all_pages_admin1') :
+  if ( get_option( 'notification_admin_benaceur_pages_admin1') == 'all_pages_admin1' || get_option( 'notification_admin_benaceur_pages_admin1') == '') :
   add_action('admin_notices', 'wp_notification_admin_benaceur');
   endif;
   if ( get_option( 'notification_admin_benaceur_pages_admin1') == 'home_admin1') :
@@ -46,7 +46,7 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     }
 }
 
-  if ( get_option( 'notification_admin_benaceur_pages_admin2') == 'all_pages_admin2') :
+  if ( get_option( 'notification_admin_benaceur_pages_admin2') == 'all_pages_admin2' || get_option( 'notification_admin_benaceur_pages_admin2') == '') :
   add_action('admin_notices', 'wp_notification_admin_benaceur_tw');
   endif;
   if ( get_option( 'notification_admin_benaceur_pages_admin2') == 'home_admin2') :
@@ -60,7 +60,7 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     }
 }
 
-  if ( get_option( 'notification_admin_benaceur_pages_admin3') == 'all_pages_admin3') :
+  if ( get_option( 'notification_admin_benaceur_pages_admin3') == 'all_pages_admin3' || get_option( 'notification_admin_benaceur_pages_admin3') == '') :
   add_action('admin_notices', 'wp_notification_admin_benaceur_th');
   endif;
   if ( get_option( 'notification_admin_benaceur_pages_admin3') == 'home_admin3') :
@@ -471,7 +471,7 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB8', 'title'
 	if ( function_exists( 'get_plugin_data' ) ) {
     $plugin_data_nab = get_plugin_data( __FILE__ );
 
-    if ( $plugin_data_nab['Version'] == '1.2.5' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
+    if ( $plugin_data_nab['Version'] == '1.2.6' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
     include ('pages/notices-nab.php');
     }
 	}
