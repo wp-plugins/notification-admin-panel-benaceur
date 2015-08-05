@@ -20,7 +20,7 @@ function fonction_de_la_page_options() {
 <?php if( isset($_GET['settings-updated']) && $_GET['page'] == 'Notification-Admin-Benaceur' ) { ?>
 	<script <?php echo 'src="' . plugins_url( 'admin/min-ben.js', __FILE__ ) . '"'; ?>></script>
       <div id="Slider_nib" class="slideup_nib">
-    <div id="h-s-msg-nab" id="message" class="updated" style="background:#B3006B;color:white;">
+    <div id="h-s-msg-nab" id="message" class="updated" style="background:#AC302D;color:white;">
         <p><strong><?php _e('Settings saved.') ?></strong></p>
     </div>
       </div>
@@ -62,7 +62,7 @@ function fonction_de_la_page_options() {
 <center><div class="to-tr2"></div></center>
 			<table class="form-table">
                 <tr> 
-<h3 align="center"><font color="#008080"><?php _e('First text', 'notification-admin-panel-benaceur'); ?></font></h3>
+<h3 align="center"><font color="#fff"><?php _e('First text', 'notification-admin-panel-benaceur'); ?></font></h3>
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Enter your text', 'notification-admin-panel-benaceur'); ?></th>
                     <td>
 	                    <textarea name="notification_admin_benaceur_text"  style="padding:6px" cols="80%" rows="6"><?php echo get_option('notification_admin_benaceur_text'); ?></textarea>
@@ -113,10 +113,24 @@ function fonction_de_la_page_options() {
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Insert the user name', 'notification-admin-panel-benaceur'); ?></th>
                     <td>
 					<div class="sm_benaceurlist_caps_input"><input style="font-weight:bold;" type="text" name="notification_admin_benaceur_for_user_name" placeholder="<?php _e( 'Enter here the user name', 'notification-admin-panel-benaceur' ); ?>" value="<?php echo get_option('notification_admin_benaceur_for_user_name'); ?>" /></div>
-                    &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'notification-admin-panel-benaceur' ); ?></em></td>
+                    &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: Mohamed,Omar,Ali', 'notification-admin-panel-benaceur' ); ?></em></td>
 				   </td>
                 </tr>
             </table>
+<table>
+	
+					<tr>
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_pages_admin1" value="all_pages_admin1" <?php if( get_option('notification_admin_benaceur_pages_admin1') == 'all_pages_admin1')echo 'checked';?> >
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("In all pages Administration Panel",'notification-admin-panel-benaceur'); ?></td></div>
+					</tr></br>
+					<tr> 
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_pages_admin1" value="home_admin1" <?php if( get_option('notification_admin_benaceur_pages_admin1') == 'home_admin1')echo 'checked';?> >
+						</td>
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("Only in the home",'notification-admin-panel-benaceur'); ?></td></div>
+					</tr></br>
+</table></br>
 <p><?php submit_button(); ?></p>
         </form>
     <form action="options.php" method="post">
@@ -132,7 +146,7 @@ function fonction_de_la_page_options() {
 				do_settings_sections( 'notification_admin_benaceur_group_tw' );
 			?>
             <table class="form-table">
-<h3 align="center"><font color="#008080"><?php _e('Second text', 'notification-admin-panel-benaceur'); ?></font></h3>
+<h3 align="center"><font color="#fff"><?php _e('Second text', 'notification-admin-panel-benaceur'); ?></font></h3>
                 <tr>    
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Enter your text', 'notification-admin-panel-benaceur'); ?></th>
                     <td>
@@ -186,6 +200,20 @@ function fonction_de_la_page_options() {
 				   </td>
                 </tr>
             </table>
+<table>
+	
+					<tr>
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_pages_admin2" value="all_pages_admin2" <?php if( get_option('notification_admin_benaceur_pages_admin2') == 'all_pages_admin2')echo 'checked';?> >
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("In all pages Administration Panel",'notification-admin-panel-benaceur'); ?></td></div>
+					</tr></br>
+					<tr> 
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_pages_admin2" value="home_admin2" <?php if( get_option('notification_admin_benaceur_pages_admin2') == 'home_admin2')echo 'checked';?> >
+						</td>
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("Only in the home",'notification-admin-panel-benaceur'); ?></td></div>
+					</tr></br>
+</table></br>
 <p><?php submit_button(); ?></p>
         </form>
     <form action="options.php" method="post">
@@ -203,7 +231,7 @@ function fonction_de_la_page_options() {
 				do_settings_sections( 'notification_admin_benaceur_group_th' );
 			?>
             <table class="form-table">
-<h3 align="center"><font color="#008080"><?php _e('Third text', 'notification-admin-panel-benaceur'); ?></font></h3>
+<h3 align="center"><font color="#fff"><?php _e('Third text', 'notification-admin-panel-benaceur'); ?></font></h3>
                 <tr>    
                 	<th style="font-size: 13px;font-weight:normal;" scope="row"><?php _e('Enter your text', 'notification-admin-panel-benaceur'); ?></th>
                     <td>
@@ -257,6 +285,20 @@ function fonction_de_la_page_options() {
 				   </td>
                 </tr>
             </table>
+<table>
+	
+					<tr>
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_pages_admin3" value="all_pages_admin3" <?php if( get_option('notification_admin_benaceur_pages_admin3') == 'all_pages_admin3')echo 'checked';?> >
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("In all pages Administration Panel",'notification-admin-panel-benaceur'); ?></td></div>
+					</tr></br>
+					<tr> 
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_pages_admin3" value="home_admin3" <?php if( get_option('notification_admin_benaceur_pages_admin3') == 'home_admin3')echo 'checked';?> >
+						</td>
+                    <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("Only in the home",'notification-admin-panel-benaceur'); ?></td></div>
+					</tr></br>
+</table></br>
 <p><?php submit_button(); ?></p>
         </form>
     <form action="options.php" method="post">
@@ -568,6 +610,16 @@ function fonction_de_la_page_options() {
       <input type="hidden" name="nab_disable_close" value="img2" <?php if( $nab_disable_close == '')echo 'checked';?> >
       <input type="hidden" name="notification_admin_benaceur_style" value="style1" <?php echo get_option( 'notification_admin_benaceur_style' ) == 'style1'; ?> >
     </form>
+<br /><br />
+<div id="sub-nab-hid">
+<a target="_blank" href="https://wordpress.org/plugins/news-ticker-benaceur/">https://wordpress.org/plugins/news-ticker-benaceur</a><br /><br />
+<a target="_blank" href="https://wordpress.org/plugins/notification-msg-interface-benaceur/">https://wordpress.org/plugins/notification-msg-interface-benaceur</a><br /><br />
+<a target="_blank" href="https://wordpress.org/plugins/notification-admin-panel-benaceur/">https://wordpress.org/plugins/notification-admin-panel-benaceur</a><br /><br />
+<a target="_blank" href="https://wordpress.org/plugins/month-name-translation-benaceur/">https://wordpress.org/plugins/month-name-translation-benaceur</a>
+<br /><br />
+</div>
+<input type='button'  id='bt-nab-hid' class="button-secondary" value='<?php _e('My plugins', 'notification-admin-panel-benaceur'); ?>' onclick="setVisibility_nab_hid('sub-nab-hid');";>
+
     </div></div>
 	<a href="#top"><div id="to-top"></div></a>
 	
@@ -584,6 +636,14 @@ function fonction_de_la_page_options() {
   float:right;
   margin-right:60px;
   <?php } ?>
+  }
+  #sub-nab-hid {display: none;}
+  #sub-nab-hid a:link,#sub-nab-hid a:visited {color:white;text-decoration:none;}
+  #sub-nab-hid a:hover {color:#D4D4D4;text-decoration:none;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   }
 </style>
 
@@ -606,6 +666,18 @@ document.getElementById('bt2').value = '<?php _e('Third text', 'notification-adm
 document.getElementById(id).style.display = 'none';
 }else{
 document.getElementById('bt2').value = '<?php _e('Hide third text', 'notification-admin-panel-benaceur'); ?>';
+document.getElementById(id).style.display = 'inline';
+}
+}
+</script>
+
+<script language="JavaScript">
+function setVisibility_nab_hid(id) {
+if(document.getElementById('bt-nab-hid').value=='<?php _e('Hide this list', 'notification-admin-panel-benaceur'); ?>'){
+document.getElementById('bt-nab-hid').value = '<?php _e('My plugins', 'notification-admin-panel-benaceur'); ?>';
+document.getElementById(id).style.display = 'none';
+}else{
+document.getElementById('bt-nab-hid').value = '<?php _e('Hide this list', 'notification-admin-panel-benaceur'); ?>';
 document.getElementById(id).style.display = 'inline';
 }
 }

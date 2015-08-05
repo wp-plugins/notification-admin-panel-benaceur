@@ -41,7 +41,6 @@ $s4 = get_option('notification_admin_benaceur_style') == 'style4';
 
 <?php } else { ?>
 
-<div id="my_wellcome_panel">
 <?php if ( get_option('notification_admin_benaceur_align_msg') == 'center' ) { ?>
 <div align="center" id="nab1" 
 <?php if ($s2) { ?> class="updated" <?php } elseif ($s3) { ?> class="error" <?php } elseif ($s4) { ?> class="update-nag" <?php } ?>>
@@ -71,7 +70,6 @@ $s4 = get_option('notification_admin_benaceur_style') == 'style4';
 <?php } ?>
  class="important-nab_a">
 <p><?php  echo get_option('notification_admin_benaceur_text_tw');  ?></p>
-</div>
 </div>
 </div>
 

@@ -9,13 +9,13 @@ if ( current_user_can( 'administrator' ) )
 
 	global $current_user;
 	$user_id = $current_user->ID;
-    $nden_n = nab_26_02_15_en_nab;
+    $nden_n = nab_05_08_15_en_nab;
 	
 	if ( ! get_user_meta($user_id, 'MIB_notice_ignore_n') ) {
 		    ?>
 			<div class="updated" id="<?php echo $nden_n;  ?>" style="margin-top:40px;"><p>
 			<span class="hov-mib-en" onmouseup="setcookie('<?php echo $nden_n;  ?>',1)" style="color:#009999;"><strong><?php _e('Hide', 'notification-admin-panel-benaceur'); ?> &nbsp;</strong></span>
-			<?php _e('After this update Click on F5 to purge the browser cache ( For those who have installed the previous version(s) only )', 'notification-admin-panel-benaceur'); ?>
+			<?php _e('After this update Click on Ctrl+F5 to purge the browser cache ( For those who have installed the previous version(s) only )', 'notification-admin-panel-benaceur'); ?>
 			</p></div>
 			
 <style>.hov-mib-en:hover {cursor:pointer;}</style>			

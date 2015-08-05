@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.2.4
+Version: 1.2.5
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -31,7 +31,12 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
   }
 }
   if (get_option( 'notification_admin_benaceur_enable_plug' )) {
+  if ( get_option( 'notification_admin_benaceur_pages_admin1') == 'all_pages_admin1') :
+  add_action('admin_notices', 'wp_notification_admin_benaceur');
+  endif;
+  if ( get_option( 'notification_admin_benaceur_pages_admin1') == 'home_admin1') :
   add_action('admin_footer-index.php', 'wp_notification_admin_benaceur');
+  endif;
   function wp_notification_admin_benaceur() { 
 	
 	if ( ( id_user_nab() || role_cap_nab() || name_user_nab() || logged_in_nab() ) && !wp_notification_admin_benaceur_tw() && !wp_notification_admin_benaceur_th() )
@@ -41,7 +46,12 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     }
 }
 
+  if ( get_option( 'notification_admin_benaceur_pages_admin2') == 'all_pages_admin2') :
+  add_action('admin_notices', 'wp_notification_admin_benaceur_tw');
+  endif;
+  if ( get_option( 'notification_admin_benaceur_pages_admin2') == 'home_admin2') :
   add_action('admin_footer-index.php', 'wp_notification_admin_benaceur_tw');
+  endif;
   function wp_notification_admin_benaceur_tw() { 
 	
 	if ( (id_user_nab_tw() || role_cap_nab_tw() || name_user_nab_tw() || logged_in_nab_tw()) && !wp_notification_admin_benaceur() && !wp_notification_admin_benaceur_th() )
@@ -50,7 +60,12 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     }
 }
 
+  if ( get_option( 'notification_admin_benaceur_pages_admin3') == 'all_pages_admin3') :
+  add_action('admin_notices', 'wp_notification_admin_benaceur_th');
+  endif;
+  if ( get_option( 'notification_admin_benaceur_pages_admin3') == 'home_admin3') :
   add_action('admin_footer-index.php', 'wp_notification_admin_benaceur_th');
+  endif;
   function wp_notification_admin_benaceur_th() { 
 	
 	if ( (id_user_nab_th() || role_cap_nab_th() || name_user_nab_th() || logged_in_nab_th()) && !wp_notification_admin_benaceur() && !wp_notification_admin_benaceur_tw() )
@@ -70,16 +85,19 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     register_setting('notification_admin_benaceur_group', 'notification_admin_benaceur_links_admin_bar_menu');
     register_setting('notification_admin_benaceur_group', 'notification_admin_benaceur_links_admin_bar_front');
     register_setting('notification_admin_benaceur_group', 'notification_admin_benaceur_links_admin_bar_admin');
+    register_setting('notification_admin_benaceur_group', 'notification_admin_benaceur_pages_admin1');
     register_setting('notification_admin_benaceur_group_tw', 'notification_admin_benaceur_text_tw');
     register_setting('notification_admin_benaceur_group_tw', 'notification_admin_benaceur_for_users_tw');
     register_setting('notification_admin_benaceur_group_tw', 'notification_admin_benaceur_for_role_x_tw');
     register_setting('notification_admin_benaceur_group_tw', 'notification_admin_benaceur_for_user_id_tw');
     register_setting('notification_admin_benaceur_group_tw', 'notification_admin_benaceur_for_user_name_tw');
+    register_setting('notification_admin_benaceur_group_tw', 'notification_admin_benaceur_pages_admin2');
     register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_text_th');
     register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_for_users_th');
     register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_for_role_x_th');
     register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_for_user_id_th');
     register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_for_user_name_th');
+    register_setting('notification_admin_benaceur_group_th', 'notification_admin_benaceur_pages_admin3');
 	
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_style');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_color_back');
@@ -132,8 +150,19 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
 		}
 }
 
-function nab_form_admin_scripts() {
-   if ( is_admin() ){ 
+     function NAB_ben_options_default() {
+      add_option( 'notification_admin_benaceur_pages_admin1', 'all_pages_admin1');
+      add_option( 'notification_admin_benaceur_pages_admin2', 'all_pages_admin2');
+      add_option( 'notification_admin_benaceur_pages_admin3', 'all_pages_admin3');
+	 }
+
+     register_activation_hook( __FILE__, 'NAB_ben_up_options' );
+     function NAB_ben_up_options(){
+      NAB_ben_options_default();
+	 }
+
+	 function nab_form_admin_scripts() {
+      if ( is_admin() ){ 
       if ( isset($_GET['page']) && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
          wp_enqueue_script('jquery');
          wp_enqueue_script( 'jquery-form' );
@@ -442,7 +471,7 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB8', 'title'
 	if ( function_exists( 'get_plugin_data' ) ) {
     $plugin_data_nab = get_plugin_data( __FILE__ );
 
-    if ( $plugin_data_nab['Version'] == '1.2.1' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
+    if ( $plugin_data_nab['Version'] == '1.2.5' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
     include ('pages/notices-nab.php');
     }
 	}
