@@ -9,7 +9,7 @@ if ( current_user_can( 'administrator' ) )
 
 	global $current_user;
 	$user_id = $current_user->ID;
-    $nden_n = nab_06_08_15_en_nab;
+    $nden_n = nab_07_08_15_en_nab;
 	
 	if ( ! get_user_meta($user_id, 'MIB_notice_ignore_n') ) {
 		    ?>

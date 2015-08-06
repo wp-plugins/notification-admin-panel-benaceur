@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.2.6
+Version: 1.2.7
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -471,7 +471,7 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB8', 'title'
 	if ( function_exists( 'get_plugin_data' ) ) {
     $plugin_data_nab = get_plugin_data( __FILE__ );
 
-    if ( $plugin_data_nab['Version'] == '1.2.6' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
+    if ( $plugin_data_nab['Version'] == '1.2.7' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
     include ('pages/notices-nab.php');
     }
 	}

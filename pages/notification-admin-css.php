@@ -75,5 +75,10 @@
     font-size:<?php if (get_option( 'notification_admin_benaceur_font_size' )) echo get_option( 'notification_admin_benaceur_font_size' ) ; else  echo '14'; ?>px;
     color:<?php if (get_option( 'notification_admin_benaceur_color_text' )) echo get_option( 'notification_admin_benaceur_color_text' ) ; else  echo '#000000'; ?>; 
     text-align:<?php if (get_option( 'notification_admin_benaceur_text_align' )) echo get_option( 'notification_admin_benaceur_text_align' ) ; else  echo 'center'; ?>;
-}	
+}
+
+<?php if( $_GET['page'] ){ ?>
+#nab1.updated,#nab1.error {margin-top:30px;}
+<?php } ?>	
+	
 </style>
