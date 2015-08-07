@@ -7,7 +7,7 @@ function CheckCookie(nab1){
  }
 }
 
-function setcookie(nab1,days){
+function setcookie_nab(nab1,days){
  <?php if ( get_option('notification_admin_benaceur_time_a_show') == 'hour' ) { ?>	
  document.cookie=nab1+'=true;expires='+(new Date(new Date().getTime()+days*<?php echo get_option('notification_admin_benaceur_enter_time') ?>*60*60*1000).toGMTString())+';path=/';
  <?php } elseif ( get_option('notification_admin_benaceur_time_a_show') == 'minute' ) { ?>	

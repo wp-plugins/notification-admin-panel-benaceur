@@ -23,7 +23,7 @@
 	box-shadow:<?php echo get_option('notification_admin_benaceur_box_shadow'); ?> <?php if (get_option( 'notification_admin_benaceur_box_shadow_v' )) echo get_option( 'notification_admin_benaceur_box_shadow_v'); elseif (get_option( 'notification_admin_benaceur_box_shadow_v') == '0')  echo "0"; else echo "4"; ?>px <?php if (get_option( 'notification_admin_benaceur_box_shadow_color' )) echo get_option( 'notification_admin_benaceur_box_shadow_color' ) ; else  echo '#888888'; ?>;
 	line-height:2;
     border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
-    width:<?php if (get_option( 'notification_admin_benaceur_width' )) echo get_option( 'notification_admin_benaceur_width' ) ; else  echo '100%'; ?>;
+    width:<?php if (get_option( 'notification_admin_benaceur_width' )) echo get_option( 'notification_admin_benaceur_width' ) ; else  echo '99%'; ?>;
     -moz-border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
     -webkit-border-radius:<?php echo get_option( 'notification_admin_benaceur_border_radius' ) ; ?>px;
 	margin-top:<?php if (get_option( 'notification_admin_benaceur_margin_top' )) echo get_option( 'notification_admin_benaceur_margin_top'); else echo "0"; ?>px;
@@ -80,5 +80,5 @@
 <?php if( $_GET['page'] ){ ?>
 #nab1.updated,#nab1.error {margin-top:30px;}
 <?php } ?>	
-	
+
 </style>

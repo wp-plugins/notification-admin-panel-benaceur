@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Notification admin panel benaceur v1.2.5\n"
+"Project-Id-Version: Notification admin panel benaceur v1.2.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-08-05 20:04:04+0000\n"
+"PO-Revision-Date: 2015-08-07 19:45:09+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -115,14 +115,14 @@ msgstr "انقر هنا لإعادة تعيين إعدادات الإضافة"
 
 #: notification-admin-benaceur-page.php:149
 #: notification-admin-benaceur-page.php:227
-#: notification-admin-benaceur-page.php:664
+#: notification-admin-benaceur-page.php:675
 #@ notification-admin-panel-benaceur
 msgid "Second text"
 msgstr "النص الثاني"
 
 #: notification-admin-benaceur-page.php:234
 #: notification-admin-benaceur-page.php:312
-#: notification-admin-benaceur-page.php:676
+#: notification-admin-benaceur-page.php:687
 #@ notification-admin-panel-benaceur
 msgid "Third text"
 msgstr "النص الثالث"
@@ -262,19 +262,19 @@ msgstr ""
 msgid "disable clignotement"
 msgstr "تعطيل الومض disable clignotement"
 
-#: notification-admin-benaceur-page.php:609
+#: notification-admin-benaceur-page.php:608
 #@ notification-admin-panel-benaceur
 msgid "Click to reset style properties plugin"
 msgstr "انقر لإعادة تعيين إعدادات الستايل"
 
-#: notification-admin-benaceur-page.php:663
-#: notification-admin-benaceur-page.php:667
+#: notification-admin-benaceur-page.php:674
+#: notification-admin-benaceur-page.php:678
 #@ notification-admin-panel-benaceur
 msgid "Hide second text"
 msgstr "إخفاء النص الثاني"
 
-#: notification-admin-benaceur-page.php:675
-#: notification-admin-benaceur-page.php:679
+#: notification-admin-benaceur-page.php:686
+#: notification-admin-benaceur-page.php:690
 #@ notification-admin-panel-benaceur
 msgid "Hide third text"
 msgstr "إخفاء النص الثالث"
@@ -409,10 +409,10 @@ msgstr "الإطار الأيمن"
 msgid "border left"
 msgstr "الإطار الأيسر"
 
-#: notification-admin-benaceur.php:454
-#: notification-admin-benaceur.php:456
-#: notification-admin-benaceur.php:460
-#: notification-admin-benaceur.php:462
+#: notification-admin-benaceur.php:537
+#: notification-admin-benaceur.php:539
+#: notification-admin-benaceur.php:543
+#: notification-admin-benaceur.php:545
 #@ default
 msgid "Notif-Admin-Benaceur"
 msgstr ""
@@ -436,14 +436,14 @@ msgstr "في جميع صفحات لوحة الإدارة"
 msgid "Only in the home"
 msgstr "في الرئيسية فقط"
 
-#: notification-admin-benaceur-page.php:621
-#: notification-admin-benaceur-page.php:626
+#: notification-admin-benaceur-page.php:643
+#: notification-admin-benaceur-page.php:699
 #@ notification-admin-panel-benaceur
 msgid "My plugins"
 msgstr "إضافاتي My plugins"
 
-#: notification-admin-benaceur-page.php:625
-#: notification-admin-benaceur-page.php:629
+#: notification-admin-benaceur-page.php:698
+#: notification-admin-benaceur-page.php:702
 #@ notification-admin-panel-benaceur
 msgid "Hide this list"
 msgstr "إخفاء القائمة"
@@ -452,4 +452,14 @@ msgstr "إخفاء القائمة"
 #@ notification-admin-panel-benaceur
 msgid "After this update Click on Ctrl+F5 to purge the browser cache ( For those who have installed the previous version(s) only )"
 msgstr "بعد هذا التحديث اضغط على Ctrl+F5 لتفريغ كاش المتصفح ( بالنسبة للذين قاموا بتنصيب الإصدار أو الإصدارات السابقة فقط ) "
+
+#: notification-admin-benaceur-page.php:622
+#@ notification-admin-panel-benaceur
+msgid "Remove all settings and data of the plugin from database when the plugin is disabled"
+msgstr "حذف جميع إعدادات وبيانات الإضافة من قاعدة البيانات عند تعطيلها"
+
+#: notification-admin-benaceur-page.php:629
+#@ notification-admin-panel-benaceur
+msgid "Do not delete"
+msgstr "لا تحذف"
 

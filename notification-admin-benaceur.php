@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.2.7
+Version: 1.2.8
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -133,6 +133,10 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_time_a_show');
     register_setting('notification_admin_benaceur_group_sty', 'notification_admin_benaceur_enter_time');
 	
+    register_setting('notification_admin_benaceur_reset_group_sty', 'NAB_ben_reset_group_sty');
+	
+    register_setting('notification_admin_benaceur_group_delete_all_options', 'notification_admin_benaceur_delete_all_options');
+	
 	    if( $_GET['page'] == 'Notification-Admin-Benaceur' ){
 		wp_enqueue_script ('jquery');
 		wp_enqueue_script('farbtastic');
@@ -155,10 +159,89 @@ add_action('admin_init', 'notification_admin_benaceur_register_options');
       add_option( 'notification_admin_benaceur_pages_admin2', 'all_pages_admin2');
       add_option( 'notification_admin_benaceur_pages_admin3', 'all_pages_admin3');
 	 }
+	 
+     function NAB_ben_options_default_group_sty() {
+    add_option('notification_admin_benaceur_style', 'style1');
+    add_option('notification_admin_benaceur_color_back', '#FFFFFF');
+    add_option('notification_admin_benaceur_color_back2', '#f5d6d6');
+    add_option('notification_admin_benaceur_align_msg', 'center');
+    add_option('notification_admin_benaceur_color_text', '#000000');
+    add_option('notification_admin_benaceur_color_border', '#CE1031');
+    add_option('notification_admin_benaceur_border_top', '1');
+    add_option('notification_admin_benaceur_border_bottom', '1');
+    add_option('notification_admin_benaceur_border_right', '1');
+    add_option('notification_admin_benaceur_border_left', '1');
+    add_option('notification_admin_benaceur_opacity', '1');
+    add_option('notification_admin_benaceur_font', 'DroidKufi_Ben, Arial');
+    add_option('notification_admin_benaceur_font_size', '14');
+    add_option('notification_admin_benaceur_width', '99%');
+    add_option('notification_admin_benaceur_text_align', 'center');
+    add_option('notification_admin_benaceur_padding_top', '1');
+    add_option('notification_admin_benaceur_padding_bottom', '1');
+    add_option('notification_admin_benaceur_margin_top', '0');
+    add_option('notification_admin_benaceur_margin_bottom', '0');
+    add_option('notification_admin_benaceur_text_shadow_color', '#000000');
+    add_option('notification_admin_benaceur_box_shadow_color', '#888888');
+    add_option('notification_admin_benaceur_box_shadow_v', '4');
+    add_option('notification_admin_benaceur_disable_this_font', '');
+    add_option('notification_admin_benaceur_disable_clignotement', '');
+    add_option('notification_admin_benaceur_disable_b_close', '');
+    add_option('nab_disable_close', 'img2');
+    add_option('notification_admin_benaceur_time_a_show', 'hour');
+    add_option('notification_admin_benaceur_enter_time', '0');
+    add_option('notification_admin_benaceur_delete_all_options', 'no_delete_opt');
+	 }
+	 
+
+	 if (get_option('NAB_ben_reset_group_sty')) :
+    add_action('admin_init', 'NAB_ben_all_reset_AllOptions');
+    function NAB_ben_all_reset_AllOptions() {
+	  
+    delete_option('NAB_ben_reset_group_sty');
+    delete_option('notification_admin_benaceur_style');
+    delete_option('notification_admin_benaceur_color_back');
+    delete_option('notification_admin_benaceur_color_back2');
+    delete_option('notification_admin_benaceur_align_msg');
+    delete_option('notification_admin_benaceur_color_text');
+    delete_option('notification_admin_benaceur_color_border');
+    delete_option('notification_admin_benaceur_border_top');
+    delete_option('notification_admin_benaceur_border_bottom');
+    delete_option('notification_admin_benaceur_border_right');
+    delete_option('notification_admin_benaceur_border_left');
+    delete_option('notification_admin_benaceur_border_radius');
+    delete_option('notification_admin_benaceur_opacity');
+    delete_option('notification_admin_benaceur_font');
+    delete_option('notification_admin_benaceur_font_size');
+    delete_option('notification_admin_benaceur_width');
+    delete_option('notification_admin_benaceur_text_align');
+    delete_option('notification_admin_benaceur_padding_top');
+    delete_option('notification_admin_benaceur_padding_bottom');
+    delete_option('notification_admin_benaceur_margin_top');
+    delete_option('notification_admin_benaceur_margin_bottom');
+    delete_option('notification_admin_benaceur_font_weight');
+    delete_option('notification_admin_benaceur_text_shadow');
+    delete_option('notification_admin_benaceur_text_shadow_color');
+    delete_option('notification_admin_benaceur_box_shadow');
+    delete_option('notification_admin_benaceur_box_shadow_color');
+    delete_option('notification_admin_benaceur_box_shadow_v');
+    delete_option('notification_admin_benaceur_disable_this_font');
+    delete_option('notification_admin_benaceur_disable_clignotement');
+    delete_option('notification_admin_benaceur_disable_b_close');
+    delete_option('nab_disable_close');
+    delete_option('notification_admin_benaceur_default');
+    delete_option('notification_admin_benaceur_time_a_show');
+    delete_option('notification_admin_benaceur_enter_time');
+    delete_option('notification_admin_benaceur_delete_all_options');
+
+	 NAB_ben_options_default_group_sty();
+	  
+  }  
+endif;	
 
      register_activation_hook( __FILE__, 'NAB_ben_up_options' );
      function NAB_ben_up_options(){
       NAB_ben_options_default();
+	  NAB_ben_options_default_group_sty();
 	 }
 
 	 function nab_form_admin_scripts() {
@@ -471,12 +554,79 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB8', 'title'
 	if ( function_exists( 'get_plugin_data' ) ) {
     $plugin_data_nab = get_plugin_data( __FILE__ );
 
-    if ( $plugin_data_nab['Version'] == '1.2.7' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
+    if ( $plugin_data_nab['Version'] == '1.2.8' && $_GET['page'] == 'Notification-Admin-Benaceur' ) {
     include ('pages/notices-nab.php');
     }
 	}
 	}
 // ADMIN NOTICES
+
+  if ( get_option( 'notification_admin_benaceur_delete_all_options') == 'delete_opt') :
+  register_deactivation_hook( __FILE__, 'NAB_ben_plugin_deactivation' );
+  function NAB_ben_plugin_deactivation() {
+	
+    delete_option('notification_admin_benaceur_enable_plug');
+    delete_option('notification_admin_benaceur_text');
+    delete_option('notification_admin_benaceur_for_users');
+    delete_option('notification_admin_benaceur_for_role_x');
+    delete_option('notification_admin_benaceur_for_user_id');
+    delete_option('notification_admin_benaceur_for_user_name');
+    delete_option('notification_admin_benaceur_links_admin_bar_menu');
+    delete_option('notification_admin_benaceur_links_admin_bar_front');
+    delete_option('notification_admin_benaceur_links_admin_bar_admin');
+    delete_option('notification_admin_benaceur_pages_admin1');
+    delete_option('notification_admin_benaceur_text_tw');
+    delete_option('notification_admin_benaceur_for_users_tw');
+    delete_option('notification_admin_benaceur_for_role_x_tw');
+    delete_option('notification_admin_benaceur_for_user_id_tw');
+    delete_option('notification_admin_benaceur_for_user_name_tw');
+    delete_option('notification_admin_benaceur_pages_admin2');
+    delete_option('notification_admin_benaceur_text_th');
+    delete_option('notification_admin_benaceur_for_users_th');
+    delete_option('notification_admin_benaceur_for_role_x_th');
+    delete_option('notification_admin_benaceur_for_user_id_th');
+    delete_option('notification_admin_benaceur_for_user_name_th');
+    delete_option('notification_admin_benaceur_pages_admin3');
+	
+    delete_option('notification_admin_benaceur_style');
+    delete_option('notification_admin_benaceur_color_back');
+    delete_option('notification_admin_benaceur_color_back2');
+    delete_option('notification_admin_benaceur_align_msg');
+    delete_option('notification_admin_benaceur_color_text');
+    delete_option('notification_admin_benaceur_color_border');
+    delete_option('notification_admin_benaceur_border_top');
+    delete_option('notification_admin_benaceur_border_bottom');
+    delete_option('notification_admin_benaceur_border_right');
+    delete_option('notification_admin_benaceur_border_left');
+    delete_option('notification_admin_benaceur_border_radius');
+    delete_option('notification_admin_benaceur_opacity');
+    delete_option('notification_admin_benaceur_font');
+    delete_option('notification_admin_benaceur_font_size');
+    delete_option('notification_admin_benaceur_width');
+    delete_option('notification_admin_benaceur_text_align');
+    delete_option('notification_admin_benaceur_padding_top');
+    delete_option('notification_admin_benaceur_padding_bottom');
+    delete_option('notification_admin_benaceur_margin_top');
+    delete_option('notification_admin_benaceur_margin_bottom');
+    delete_option('notification_admin_benaceur_font_weight');
+    delete_option('notification_admin_benaceur_text_shadow');
+    delete_option('notification_admin_benaceur_text_shadow_color');
+    delete_option('notification_admin_benaceur_box_shadow');
+    delete_option('notification_admin_benaceur_box_shadow_color');
+    delete_option('notification_admin_benaceur_box_shadow_v');
+    delete_option('notification_admin_benaceur_disable_this_font');
+    delete_option('notification_admin_benaceur_disable_clignotement');
+    delete_option('notification_admin_benaceur_disable_b_close');
+    delete_option('nab_disable_close');
+    delete_option('notification_admin_benaceur_default');
+    delete_option('notification_admin_benaceur_time_a_show');
+    delete_option('notification_admin_benaceur_enter_time');
+	
+    delete_option('NAB_ben_reset_group_sty');
+	
+    delete_option('notification_admin_benaceur_delete_all_options');
+}
+  endif; // endif notification_admin_benaceur_delete_all_options
 
 require ('notification-admin-benaceur-page.php');
 

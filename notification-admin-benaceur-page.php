@@ -121,7 +121,7 @@ function fonction_de_la_page_options() {
 	
 					<tr>
 						<td>
-                   <input type="radio" name="notification_admin_benaceur_pages_admin1" value="all_pages_admin1" <?php if( get_option('notification_admin_benaceur_pages_admin1') == 'all_pages_admin1')echo 'checked';?> >
+                   <input type="radio" name="notification_admin_benaceur_pages_admin1" value="all_pages_admin1" <?php if( get_option('notification_admin_benaceur_pages_admin1') == 'all_pages_admin1' || get_option('notification_admin_benaceur_pages_admin1') == '')echo 'checked';?> >
                     <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("In all pages Administration Panel",'notification-admin-panel-benaceur'); ?></td></div>
 					</tr></br>
 					<tr> 
@@ -204,7 +204,7 @@ function fonction_de_la_page_options() {
 	
 					<tr>
 						<td>
-                   <input type="radio" name="notification_admin_benaceur_pages_admin2" value="all_pages_admin2" <?php if( get_option('notification_admin_benaceur_pages_admin2') == 'all_pages_admin2')echo 'checked';?> >
+                   <input type="radio" name="notification_admin_benaceur_pages_admin2" value="all_pages_admin2" <?php if( get_option('notification_admin_benaceur_pages_admin2') == 'all_pages_admin2' || get_option('notification_admin_benaceur_pages_admin2') == '')echo 'checked';?> >
                     <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("In all pages Administration Panel",'notification-admin-panel-benaceur'); ?></td></div>
 					</tr></br>
 					<tr> 
@@ -289,7 +289,7 @@ function fonction_de_la_page_options() {
 	
 					<tr>
 						<td>
-                   <input type="radio" name="notification_admin_benaceur_pages_admin3" value="all_pages_admin3" <?php if( get_option('notification_admin_benaceur_pages_admin3') == 'all_pages_admin3')echo 'checked';?> >
+                   <input type="radio" name="notification_admin_benaceur_pages_admin3" value="all_pages_admin3" <?php if( get_option('notification_admin_benaceur_pages_admin3') == 'all_pages_admin3' || get_option('notification_admin_benaceur_pages_admin3') == '')echo 'checked';?> >
                     <div class="colwrap-display">&nbsp;&nbsp;<td><?php _e("In all pages Administration Panel",'notification-admin-panel-benaceur'); ?></td></div>
 					</tr></br>
 					<tr> 
@@ -429,7 +429,7 @@ function fonction_de_la_page_options() {
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="notification-admin-benaceur-colwrap">
-								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_width' )) echo get_option( 'notification_admin_benaceur_width' ); else echo "100%"; ?>" name="notification_admin_benaceur_width" />
+								<input type="text" class="notification-admin-benaceur-color-inp" value="<?php if (get_option( 'notification_admin_benaceur_width' )) echo get_option( 'notification_admin_benaceur_width' ); else echo "99%"; ?>" name="notification_admin_benaceur_width" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("Width by adding: px or %",'notification-admin-panel-benaceur'); ?> </td></div></br>
@@ -603,13 +603,35 @@ function fonction_de_la_page_options() {
 			</form>
     <form action="options.php" method="post">
             <?php
-			settings_fields( 'notification_admin_benaceur_group_sty' ); 
-			do_settings_sections( 'notification_admin_benaceur_group_sty' );
+			settings_fields( 'notification_admin_benaceur_reset_group_sty' );
 			?>
       <input type="submit" value="<?php _e('Click to reset style properties plugin', 'notification-admin-panel-benaceur');?>" class="button-secondary" />
-      <input type="hidden" name="nab_disable_close" value="img2" <?php if( $nab_disable_close == '')echo 'checked';?> >
-      <input type="hidden" name="notification_admin_benaceur_style" value="style1" <?php echo get_option( 'notification_admin_benaceur_style' ) == 'style1'; ?> >
+	  <input type="hidden"  name="NAB_ben_reset_group_sty" value="1" <?php if(!get_option( 'NAB_ben_reset_group_sty' ) ) { echo 'checked="checked"'; } ?>/>
     </form>
+</br><div class="to-tr"></div>
+    <form action="options.php" method="post">
+            <?php
+			settings_fields( 'notification_admin_benaceur_group_delete_all_options' ); 
+			do_settings_sections( 'notification_admin_benaceur_group_delete_all_options' );
+			?>
+<table style="margin-top:20px;" >
+	
+					<tr>
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_delete_all_options" value="delete_opt" <?php $del_nab = get_option( 'notification_admin_benaceur_delete_all_options' ); if( $del_nab == 'delete_opt') echo 'checked';?> >
+                    <td><?php _e("Remove all settings and data of the plugin from database when the plugin is disabled",'notification-admin-panel-benaceur'); ?></td>
+						</td>
+					</tr>
+					<tr> 
+						<td>
+                   <input type="radio" name="notification_admin_benaceur_delete_all_options" value="no_delete_opt" <?php if( $del_nab == 'no_delete_opt' || $del_nab == '') echo 'checked';?> >
+						</td>
+                   <td><?php _e("Do not delete",'notification-admin-panel-benaceur'); ?></td>
+					</tr>
+</table>
+					<p><?php submit_button(); ?></p>
+    </form>
+</br>
 <br /><br />
 <div id="sub-nab-hid">
 <a target="_blank" href="https://wordpress.org/plugins/news-ticker-benaceur/">https://wordpress.org/plugins/news-ticker-benaceur</a><br /><br />
