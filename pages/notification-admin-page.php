@@ -67,7 +67,9 @@ $s4 = get_option('notification_admin_benaceur_style') == 'style4';
  id="my_wellcome_panel-b-note-nab_a" 
 <?php } ?>
  class="important-nab_a">
-<p><?php  echo get_option('notification_admin_benaceur_text');  ?></p>
+<div class="important-nab_234">
+<?php  echo get_option('notification_admin_benaceur_text');  ?>
+</div>
 </div>
 </div>
 

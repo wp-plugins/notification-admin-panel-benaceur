@@ -43,17 +43,20 @@
 	padding-left:6px;
 	visibility: visible; 
 }
-
+.important-nab_234 {
+	padding-top:4px;
+	padding-bottom:4px;
+}
+	
 #close_nab { 
     position:relative;
 	background-color:;
 	color:#000;
 	width:13px;
-    margin-bottom:-2px;
 	border-radius:4px;
     border:1px solid transparent;
 	font-family:Arial;font-size:18px;font-weight:bold;text-align:center;
-	margin-top:<?php if ($s1 || $s || $s4) echo "-7"; else echo "2"; ?>px;
+	margin-top:<?php if ($s1 || $s) echo "-7"; else echo "2"; ?>px;
     <?php if ( is_rtl() ) { ?>
 	margin-left:<?php if ($s1 || $s) echo "5"; elseif ($s4) echo "-7"; else echo "-4"; ?>px;
 	float:left;
@@ -77,6 +80,12 @@
     text-align:<?php if (get_option( 'notification_admin_benaceur_text_align' )) echo get_option( 'notification_admin_benaceur_text_align' ) ; else  echo 'center'; ?>;
 }
 
+#nab1.update-nag {
+	min-width:94.8%;
+	padding-top:0px;
+	padding-bottom:0px;
+}
+	
 <?php if( $_GET['page'] ){ ?>
 #nab1.updated,#nab1.error {margin-top:30px;}
 <?php } ?>	

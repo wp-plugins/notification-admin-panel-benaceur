@@ -3,7 +3,7 @@
 Plugin Name: Notification admin panel benaceur
 Plugin URI: http://benaceur-php.com/
 Description: display a message or notice in the admin panel to a particular group or a member by his user id or username.
-Version: 1.2.8
+Version: 1.2.9
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
